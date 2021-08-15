@@ -84,8 +84,21 @@ Here is sample data for the 9:00 sales: { sales: '88 cookies', time: '9 a.m.' }.
 Write a function named salesData that uses forEach to iterate over the hourlySales array and create an object for each hour. Return an array of the formatted data.
 ------------------------------------------------------------------------------------------------ */
 
-const salesData = (hours, data) => grandTotal(data).map((itm,i) => ({sales: `${itm} cookies`, time: hours[i]}));
-// the test for this one is also borken i think 
+const salesData = (hours, data) => {
+  let arr = [];
+  for (let i = 0; i < 12 ; i++) {arr.push(data.map(itm => itm[i]));}
+
+  let n = arr.map(itm => Number(itm.reduce((tot, itm) => tot + Number(itm),0)));
+
+  let m = n.map((itm,i) => {
+    return ({sales: `${Number(itm)} cookies`, time: hours[i]});
+
+  });
+  return m;
+};
+
+
+// the test for this one is also borken i think
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
@@ -233,7 +246,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should create an object of data for each store', () => {
     expect(salesData(hoursOpen, grandTotal(cookieStores))).toStrictEqual([
       { sales: '88 cookies', time: '9 a.m.' },
