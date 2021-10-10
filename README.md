@@ -1,4 +1,10 @@
-# Data Structures and Algorithms
+# Table of Content
+
+| Challenge    |                                                  link                                                   |
+| ------------ | :-----------------------------------------------------------------------------------------------------: |
+| Challenge 01 | [Reverse an Array](https://github.com/HamzaAhmad97/data-structures-and-algorithms/array_reverse/README) |
+
+## Data Structures and Algorithms
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
 
