@@ -2,7 +2,6 @@
 
 | Challenge    |                                                  link                                                   |
 | ------------ | :-----------------------------------------------------------------------------------------------------: |
-
 | Challenge 01 | [Reverse an Array](https://github.com/HamzaAhmad97/data-structures-and-algorithms/blob/main/array_reverse/README.md) |
 
 
