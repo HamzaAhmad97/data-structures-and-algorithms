@@ -4,6 +4,7 @@
 | ------------ | :-----------------------------------------------------------------------------------------------------: |
 | Challenge 01 | [Reverse an Array](https://github.com/HamzaAhmad97/data-structures-and-algorithms/blob/main/array_reverse/README.md) |
 | Challenge 02 | [Insert in the Middle](https://github.com/HamzaAhmad97/data-structures-and-algorithms/blob/main/array_insert_shift/README.md) |
+| Challenge 03 | [Binary Search](https://github.com/HamzaAhmad97/data-structures-and-algorithms/blob/main/array_binary_search/README.md) |
 
 
 ## Data Structures and Algorithms
