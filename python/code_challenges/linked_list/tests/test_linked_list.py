@@ -13,7 +13,7 @@ def test_linked_list_is_empty_when_instantiated():
     expected = None
 
     ll = LinkedList()
-    actual = ll.__head
+    actual = ll.head
 
     assert actual == expected
 
@@ -24,7 +24,7 @@ def test_insert_to_linked_list():
 
     ll = LinkedList()
     ll.insert("a")
-    actual = ll.__head.value
+    actual = ll.head.value
 
     assert actual == expected
 
@@ -36,7 +36,7 @@ def test_head_points_to_first_node_in_linked_list():
     ll = LinkedList()
     ll.insert("first")
     ll.insert("last")
-    actual = ll.__head.next_.value
+    actual = ll.head.value
 
     assert actual == expected
 
