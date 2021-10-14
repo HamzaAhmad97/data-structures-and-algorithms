@@ -36,4 +36,11 @@ def test_head_points_to_first_node_in_linked_list():
 
     assert actual == expected
 
+def test_includes_returns_true_if_value_equals_node_value():
+    expected = True
 
+    ll = LinkedList()
+    ll.insert(1)
+    actual = ll.includes(1)
+
+    assert actual == expected
