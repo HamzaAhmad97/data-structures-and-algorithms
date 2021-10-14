@@ -2,6 +2,10 @@
 
 Linked lists are a type of a data structure. A linked list consists of a number of nodes where each node is just a mere representation of something, given that each node must have a value attribute and a next attribute that holds a reference to the node after it in the sequence. There is the head attribute which holds a reference to the first node in the list. The next attirbute of the last node in the list does not hold any reference, thus its value is None. We can insert to linked lists, as we can check for a specific value within them.
 
+## Link for the latest open pull request
+
+[Latest open pull request](https://github.com/HamzaAhmad97/data-structures-and-algorithms/pull/22)
+
 ## Challenge
 
 The challenge requires defining a class representing a linked list and another representing a node in the linked list. A node instance has to contain two attributes, the value for holding the data, and the next attribute which holds a reference to the next node.
