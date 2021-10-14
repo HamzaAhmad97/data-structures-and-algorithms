@@ -44,3 +44,12 @@ def test_includes_returns_true_if_value_equals_node_value():
     actual = ll.includes(1)
 
     assert actual == expected
+
+def test_includes_returns_false_if_value_does_not_equal_node_value():
+    expected = False
+
+    ll = LinkedList()
+    ll.insert(2)
+    actual = ll.includes(3)
+
+    assert actual == expected
