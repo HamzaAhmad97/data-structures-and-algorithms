@@ -14,3 +14,11 @@ def test_linked_list_is_empty_when_instantiated():
     assert actual == expected
 
 
+def test_insertion_to_linked_list():
+    expected = "a"
+
+    ll = LinkedList()
+    ll.insert("a")
+    actual = ll.__head.value
+
+    assert actual == expected
