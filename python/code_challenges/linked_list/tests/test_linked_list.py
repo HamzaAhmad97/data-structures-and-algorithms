@@ -10,6 +10,9 @@ def test_version():
 
 @pytest.mark.skip('to do')
 def test_linked_list_is_empty_when_instantiated():
+    """
+    Test if the linked list is empty when it is first created
+    """
     expected = None
 
     ll = LinkedList()
@@ -20,6 +23,9 @@ def test_linked_list_is_empty_when_instantiated():
 
 @pytest.mark.skip('to do')
 def test_insert_to_linked_list():
+    """
+    Test if the insert method works by inserting a value and then checking for the head of the linked list
+    """
     expected = "a"
 
     ll = LinkedList()
@@ -31,6 +37,9 @@ def test_insert_to_linked_list():
 
 @pytest.mark.skip('to do')
 def test_head_points_to_first_node_in_linked_list():
+    """
+    Test if the head property points to the first node
+    """
     expected = "last"
 
     ll = LinkedList()
@@ -43,6 +52,9 @@ def test_head_points_to_first_node_in_linked_list():
 
 @pytest.mark.skip('to do')
 def test_includes_returns_true_if_value_equals_node_value():
+    """
+    Test if the includes method returns True if the value passed exists in a node inside the linked list
+    """
     expected = True
 
     ll = LinkedList()
@@ -54,6 +66,9 @@ def test_includes_returns_true_if_value_equals_node_value():
 
 @pytest.mark.skip('to do')
 def test_includes_returns_false_if_value_does_not_equal_node_value():
+    """
+    Test if the includes method returns False if the value passed does not exist in a node in the linked list
+    """
     expected = False
 
     ll = LinkedList()
@@ -65,6 +80,9 @@ def test_includes_returns_false_if_value_does_not_equal_node_value():
 
 @pytest.mark.skip('to do')
 def test_insert_multiple_nodes_to_linked_list():
+    """
+    Test if inserting more than value to the linked list works correctly
+    """
     expected = True
 
     ll = LinkedList()
@@ -79,6 +97,9 @@ def test_insert_multiple_nodes_to_linked_list():
 
 @pytest.mark.skip('to do')
 def test_to_string_returns_a_good_representation_of_list():
+    """
+    Test the to_string method whether it returns the correct representation for the linked list
+    """
     expected = "{c} -> {b} -> Null"
 
     ll = LinkedList()
