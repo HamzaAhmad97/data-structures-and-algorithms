@@ -65,3 +65,13 @@ def test_insert_multiple_nodes_to_linked_list():
     actual = first and second
 
     assert actual == expected
+
+def test_to_string_returns_a_good_representation_of_list():
+    expected = "{c} -> {b} -> Null"
+
+    ll = LinkedList()
+    ll.insert("b")
+    ll.insert("c")
+    actual = ll.to_string()
+
+    assert actual == expected
