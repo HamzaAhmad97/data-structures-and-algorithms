@@ -163,6 +163,20 @@ class LinkedList:
                 break
             current = current.next_
 
+    def delete_node(self, val):
+        """
+        Delete a node given its value
 
+        Args:
+            val (any): The value of the node to be removed
+        """
+        current  = self.head
+        while True:
+            if current == self.head and current.value == val:
+                self.head = self.head.next_
+                break
+            elif current.next_.value == val:
+                current.next_ = current.next_.next_
+                break
 
 

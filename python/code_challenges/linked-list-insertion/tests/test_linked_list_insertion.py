@@ -81,6 +81,7 @@ def test_insert_after_the_last_node():
     actual = ll.to_string()
     assert actual == expected
 
+@pytest.mark.skip('to do')
 def test_delete_node():
     expected = "{a} -> Null"
     ll = LinkedList()
@@ -88,4 +89,18 @@ def test_delete_node():
     ll.insert('b')
     ll.delete_node('b')
     actual = ll.to_string()
+    assert actual == expected
+
+@pytest.mark.skip('to do')
+def test_to_string_returns_a_good_representation_of_list():
+    """
+    Test the to_string method whether it returns the correct representation for the linked list
+    """
+    expected = "{c} -> {b} -> Null"
+
+    ll = LinkedList()
+    ll.insert("b")
+    ll.insert("c")
+    actual = ll.to_string()
+
     assert actual == expected
