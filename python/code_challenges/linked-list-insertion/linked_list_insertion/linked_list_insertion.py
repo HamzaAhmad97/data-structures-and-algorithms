@@ -128,7 +128,13 @@ class LinkedList:
         """
         current = self.head
         while True:
-            if current.next_.value == val:
+            if current.next_ == None and current == self.head and current.value == val:
+                new_node = Node()
+                new_node.value = new_val
+                new_node.next_ = self.head
+                self.head = new_node
+                break
+            elif current.next_.value == val:
                 new_node = Node()
                 new_node.value = new_val
                 new_node.next_ = current.next_
