@@ -53,3 +53,12 @@ def test_insert_after_a_node_in_the_middle():
     ll.insert_after('c','x')
     actual = ll.to_string()
     assert actual == expected
+
+@pytest.mark.skip('to do')
+def test_insert_after_the_last_node():
+    expected = "{a} -> {x} -> Null"
+    ll = LinkedList()
+    ll.insert('a')
+    ll.insert_after('a','x')
+    actual = ll.to_string()
+    assert actual == expected
