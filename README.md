@@ -5,6 +5,8 @@
 | Challenge 01 | [Reverse an Array](https://github.com/HamzaAhmad97/data-structures-and-algorithms/tree/main/python/code_challenges/array_reverse/README.md) |
 | Challenge 02 | [Insert in the Middle](https://github.com/HamzaAhmad97/data-structures-and-algorithms/tree/main/python/code_challenges/array_insert_shift/README.md) |
 | Challenge 03 | [Binary Search](https://github.com/HamzaAhmad97/data-structures-and-algorithms/tree/main/python/code_challenges/array_binary_search) |
+| Challenge 04 | [mock interview]() |
+| Challenge 05 | [Linked Lists](https://github.com/HamzaAhmad97/data-structures-and-algorithms/blob/main/python/code_challenges/linked_list/README.md) |
 
 
 ## Data Structures and Algorithms
