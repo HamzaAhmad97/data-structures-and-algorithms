@@ -34,3 +34,11 @@ def test_insert_node_before_a_node_in_the_middle():
     actual = ll.to_string()
     assert actual == expected
 
+@pytest.mark.skip('to do')
+def test_insert_node_before_first_node():
+    expected = "{x} -> {a} -> Null"
+    ll = LinkedList()
+    ll.insert('a')
+    ll.insert_before('a','x')
+    actual = ll.to_string()
+    assert actual == expected
