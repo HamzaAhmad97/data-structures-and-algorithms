@@ -1,3 +1,6 @@
+from typing import Counter
+
+
 class Node:
     """
     A class representing a node in a linked list
@@ -159,3 +162,7 @@ class LinkedList:
                 current.next_ = new_node
                 break
             current = current.next_
+
+
+
+

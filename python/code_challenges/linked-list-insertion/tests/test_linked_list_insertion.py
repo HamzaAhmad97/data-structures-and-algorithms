@@ -80,3 +80,12 @@ def test_insert_after_the_last_node():
     ll.insert_after('a','x')
     actual = ll.to_string()
     assert actual == expected
+
+def test_delete_node():
+    expected = "{a} -> Null"
+    ll = LinkedList()
+    ll.insert('a')
+    ll.insert('b')
+    ll.delete_node('b')
+    actual = ll.to_string()
+    assert actual == expected
