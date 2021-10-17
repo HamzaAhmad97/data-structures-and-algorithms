@@ -42,6 +42,12 @@ class LinkedList:
             returns True if a node exists in the list and its value equals the passed value
         to_string():
             return a string representation of the linked list
+        append(val : any)
+            Append a node to the end of a linked list.
+        insert_before(val : any, new_val : any)
+            Insert a node given its value before another node given its value.
+        insert_after(val : any, new_val : any)
+            Insert a node given its value after another node given its value.
     """
     def __init__(self):
         """
@@ -96,6 +102,12 @@ class LinkedList:
         return representation
 
     def append(self, val):
+        """
+        Append a node to the end of a linked list.
+
+        Args:
+            val (any): The value to be stored in a node
+        """
         current = self.head
         while True:
             if not current.next_:
@@ -107,6 +119,13 @@ class LinkedList:
             current = current.next_
 
     def insert_before(self, val, new_val):
+        """
+        Insert a node given its value before another node given its value.
+
+        Args:
+            val (any): The value of the node that the new node will be inserted before
+            new_val (any): The value to be stored in the new node
+        """
         current = self.head
         while True:
             if current.next_.value == val:
@@ -118,6 +137,13 @@ class LinkedList:
             current = current.next_
 
     def insert_after(self, val, new_val):
+        """
+        Insert a node after another node given its value
+
+        Args:
+            val (any): The value of the node that the new node will be inserted after
+            new_val (any): The value to be stored in the new node
+        """
         current = self.head
         while True:
             if current.value == val:
