@@ -13,3 +13,13 @@ def test_append():
     ll.append('x')
     actual = ll.to_string()
     assert actual == expected
+    
+@pytest.mark.skip('to do')
+def test_append_multiple_nodes_to_linked_list():
+    expected = "{a} -> {x} -> {y} -> Null"
+    ll = LinkedList()
+    ll.insert("a")
+    ll.append('x')
+    ll.append('y')
+    actual = ll.to_string()
+    assert actual == expected
