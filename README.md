@@ -7,6 +7,7 @@
 | Challenge 03 | [Binary Search](https://github.com/HamzaAhmad97/data-structures-and-algorithms/tree/main/python/code_challenges/array_binary_search) |
 | Challenge 04 | [mock interview]() |
 | Challenge 05 | [Linked Lists](https://github.com/HamzaAhmad97/data-structures-and-algorithms/blob/main/python/code_challenges/linked_list/README.md) |
+| Challenge 06 | [Linked Lists Insertion](https://github.com/HamzaAhmad97/data-structures-and-algorithms/blob/main/python/code_challenges/linked-list-insertion/README.md) |
 
 
 ## Data Structures and Algorithms
