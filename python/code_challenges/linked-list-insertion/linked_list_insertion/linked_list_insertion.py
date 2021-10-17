@@ -28,3 +28,102 @@ class Node:
             string: the value of a node as a string
         """
         return f"{self.value}"
+
+class LinkedList:
+    """
+    A class representing a Linked List
+
+    Methods:
+        __init__():
+            the constructor method, takes no arguments
+        insert(value : any):
+            creates a node and then inserts it to the linked list
+        includes(value : any):
+            returns True if a node exists in the list and its value equals the passed value
+        to_string():
+            return a string representation of the linked list
+    """
+    def __init__(self):
+        """
+        The constructor method for the linked list, initializes the head property to None
+        """
+        self.head = None
+
+    def insert(self, value):
+        """
+        Insert a node into the linked list
+
+        Args:
+            value (any): the value to be stored as the valur inside of the new node
+        """
+        new_node = Node()
+        new_node.value = value
+        new_node.next_ = self.head
+        self.head = new_node
+
+    def includes(self, value):
+        """
+        Check if the node with the given value exists in the linked list
+
+        Args:
+            value (any): the value to be checked
+
+        Returns:
+            Boolean: True if the a node exists and its value is equal to the passed value
+        """
+
+        current = self.head
+        while current != None:
+            if current.value == value:
+                return True
+            current = current.next_
+        return False
+
+    def to_string(self):
+        """
+        Return a string representation of the linked list
+
+        Returns:
+            string: a representation of the linked list
+        """
+        current = self.head
+        representation = ""
+        while current != None:
+            representation += f"{{{current.value}}} -> "
+            if current.next_ == None:
+                representation += f"Null"
+            current = current.next_
+        return representation
+
+    def append(self, val):
+        current = self.head
+        while True:
+            if not current.next_:
+                new_node = Node()
+                new_node.value = val
+                new_node.next_ = None
+                current.next_ = new_node
+                break
+            current = current.next_
+
+    def insert_before(self, val, new_val):
+        current = self.head
+        while True:
+            if current.next_.value == val:
+                new_node = Node()
+                new_node.value = new_val
+                new_node.next_ = current.next_
+                current.next_ = new_node
+                break
+            current = current.next_
+
+    def insert_after(self, val, new_val):
+        current = self.head
+        while True:
+            if current.value == val:
+                new_node = Node()
+                new_node.value = new_val
+                new_node.next_ = current.next_
+                current.next_ = new_node
+                break
+            current = current.next_
