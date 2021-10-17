@@ -1,5 +1,5 @@
 from linked_list_insertion import __version__
-from linked_list_insertion.linked_list_insertions import LinkedList
+from linked_list_insertion.linked_list_insertion import LinkedList
 import pytest
 
 def test_version():
