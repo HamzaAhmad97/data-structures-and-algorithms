@@ -2,7 +2,7 @@
 
 This challenge requires defining a function that takes to linked lists and zips or combines them together returning a new linked list.
 
-## [Latest open pull request]()
+## [Latest open pull request](https://github.com/HamzaAhmad97/data-structures-and-algorithms/pull/26)
 
 ## Whiteboard Process
 
