@@ -9,7 +9,7 @@
 | Challenge 05 | [Linked Lists](https://github.com/HamzaAhmad97/data-structures-and-algorithms/blob/main/python/code_challenges/linked_list/README.md) |
 | Challenge 06 | [Linked Lists Insertion](https://github.com/HamzaAhmad97/data-structures-and-algorithms/blob/main/python/code_challenges/linked-list-insertion/README.md) |
 | Challenge 07 | [linked list kth](https://github.com/HamzaAhmad97/data-structures-and-algorithms/tree/main/python/code_challenges/linked-list-kth) |
-
+| Challenge 08 | [linked list zip](https://github.com/HamzaAhmad97/data-structures-and-algorithms/blob/main/python/code_challenges/linked-list-zip/README.md) |
 
 ## Data Structures and Algorithms
 
