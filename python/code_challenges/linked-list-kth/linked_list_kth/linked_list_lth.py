@@ -176,14 +176,13 @@ class LinkedList:
     def kth_from_end(self, k):
         current = self.head
         increment = 0
-        while True:
+        while current.next_:
             current.index += increment
             increment += 1
-
-            if not current.next_:
-                self._tail = current
-                break
             current = current.next_
+            if not current.next_:
+                current.index += increment
+                self._tail = current
         if k > self._tail.index or k < 0:
             raise OutOfRangeException("Distance cannot be negative or exceeding the number of nodes in the list.")
         current = self.head
@@ -205,4 +204,4 @@ if __name__ == "__main__":
     ll.insert("e")
     ll.insert("f")
     print(ll.to_string())
-    print(ll.kth_from_end(0))
+    print(ll.kth_form_end(0))
