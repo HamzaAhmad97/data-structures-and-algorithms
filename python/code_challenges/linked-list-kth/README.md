@@ -2,6 +2,8 @@
 
 This challenge requires defining a function that takes a number k, and based on that number return the value of the node that is k steps away from the last node in the linked list.
 
+## [Latest open pull request](https://github.com/HamzaAhmad97/data-structures-and-algorithms/pull/25)
+
 ## Whiteboard Process
 
 ![](./kth.png)
