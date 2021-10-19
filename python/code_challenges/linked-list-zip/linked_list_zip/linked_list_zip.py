@@ -208,6 +208,19 @@ class LinkedList:
 
 
 def zip_lists(j, k):
+    """
+    Returns a new linked list of zipping the two passed linked lists.
+
+    Args:
+        j (LinkedList): First linked list
+        k (LinkedList): Second linked list
+
+    Raises:
+        EmptyLinkedListException: If either of the lists is empty
+
+    Returns:
+        LinkedList: A new linked list of zipping the two passed linked lists
+    """
     if not (j.head and k.head):
         raise EmptyLinkedListException("One or both arguments are empty linked lists.")
     curj = j.head
