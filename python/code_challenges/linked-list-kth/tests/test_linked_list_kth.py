@@ -30,4 +30,9 @@ def test_kth_from_end_raises_an_exception_if_k_is_negative():
     with pytest.raises(OutOfRangeException, match="Distance cannot be negative or exceeding the number of nodes in the list."):
         ll.kth_from_end(-1)
 
+def test_kth_from_end_raises_an_exception_if_k_is_greater_than_the_length_of_linked_list():
+    ll = LinkedList()
+    ll.insert('a')
+    with pytest.raises(OutOfRangeException, match="Distance cannot be negative or exceeding the number of nodes in the list."):
+        ll.kth_from_end(2)
 
