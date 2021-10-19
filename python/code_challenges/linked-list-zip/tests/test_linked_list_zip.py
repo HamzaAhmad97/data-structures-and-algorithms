@@ -18,4 +18,14 @@ def test_zip_lists_returns_correct_result_when_both_lists_are_of_the_same_length
     actual = zip_lists(ll,kk).to_string()
     assert actual == expected
 
+def test_zip_lists_returns_correct_result_when_lists_are_not_of_the_same_length():
+    expected = '{b} -> {3} -> {a} -> {2} -> {1} -> Null'
+    ll = LinkedList()
+    ll.insert("a")
+    ll.insert("b")
+    kk = LinkedList()
+    kk.insert("1")
+    kk.insert("2")
+    kk.insert("3")
+    actual = zip_lists(ll,kk).to_string()
 
