@@ -15,3 +15,13 @@ def test_kth_from_end_returns_correct_value_if_number_is_smaller_than_list_lengt
     assert actual == expected
 
 
+def test_kth_from_end_returns_correct_value_when_k_equals_length_of_list():
+    expected = 'c'
+    ll = LinkedList()
+    ll.insert('a')
+    ll.insert('b')
+    ll.insert('c')
+    actual = ll.kth_from_end(2) # since the list is zero indexed
+    assert actual == expected
+
+
