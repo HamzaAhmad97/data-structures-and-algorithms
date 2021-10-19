@@ -29,3 +29,9 @@ def test_zip_lists_returns_correct_result_when_lists_are_not_of_the_same_length(
     kk.insert("3")
     actual = zip_lists(ll,kk).to_string()
 
+def test_zip_lists_raises_an_exception_when_either_of_lists_is_empty():
+    ll = LinkedList()
+    ll.insert('a')
+    kk = LinkedList()
+    with pytest.raises(EmptyLinkedListException, match="One or both arguments are empty linked lists."):
+        zip_lists(ll,kk)
