@@ -36,3 +36,9 @@ def test_kth_from_end_raises_an_exception_if_k_is_greater_than_the_length_of_lin
     with pytest.raises(OutOfRangeException, match="Distance cannot be negative or exceeding the number of nodes in the list."):
         ll.kth_from_end(2)
 
+def test_kth_from_end_returns_correct_value_when_linked_list_contains_one_node():
+    expected = 'a'
+    ll = LinkedList()
+    ll.insert('a')
+    actual = ll.kth_from_end(0)
+    assert actual == expected
