@@ -50,14 +50,15 @@ class LinkedList:
             Insert a node given its value before another node given its value.
         insert_after(val : any, new_val : any)
             Insert a node given its value after another node given its value.
+        kth_from_end(k : int)
+            Get the value of the node that is k steps from the tail
     """
 
     def __init__(self):
         """
-        The constructor method for the linked list, initializes the head property to None
+        The constructor method for the linked list, initializes the head property to None and the tail to None
         """
         self.head = None
-        self._idx_from_tail = 0
         self._tail = None
 
     def insert(self, value):
@@ -174,6 +175,18 @@ class LinkedList:
                 break
 
     def kth_from_end(self, k):
+        """
+        A method that returns the value of the node that is k steps from the tail of the list
+
+        Args:
+            k (Integer): The index of the node to be returned starting from the tail
+
+        Raises:
+            OutOfRangeException: If k is negative or larger than the length of the list
+
+        Returns:
+            any: The value of the node that matches
+        """
         current = self.head
         increment = 0
         while True:
