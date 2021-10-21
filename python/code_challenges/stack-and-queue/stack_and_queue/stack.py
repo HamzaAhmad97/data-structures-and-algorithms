@@ -1,17 +1,20 @@
 from stack_and_queue.node import Node
+#from node import Node
+
 
 class EmptyStackException(Exception):
     pass
+
 
 class Stack():
     def __init__(self):
         self.top = None
 
     def __str__(self):
-        representation = 'Empty stack.' if self.is_empty() else ''
+        representation = 'Empty stack.' if self.is_empty() else '________________'
         current = self.top
         while current:
-            representation += f"________________\nValue: {current.value}\nNext: {current.next}\n________________"
+            representation += f"\n\nValue: {current.value}\nNext: {str(current.next)}\n________________"
             current = current.next
         return representation
 
@@ -39,3 +42,14 @@ class Stack():
         if self.is_empty():
             raise EmptyStackException("Stack is empty, can't peek.")
         return self.top.value
+
+
+if __name__ == "__main__":
+    stack = Stack()
+    stack.push(1)
+    stack.push(2)
+    stack.push(3)
+    print(stack)
+    print(stack.pop())
+    print(stack.is_empty())
+    print(stack.peek())
