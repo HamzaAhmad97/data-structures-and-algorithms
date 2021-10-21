@@ -8,10 +8,11 @@ class Stack():
         self.top = None
 
     def __str__(self):
-        representation = ''
+        representation = 'Empty stack.' if self.is_empty() else ''
         current = self.top
         while current:
             representation += f"________________\nValue: {current.value}\nNext: {current.next}\n________________"
+            current = current.next
         return representation
 
     def push(self, value):

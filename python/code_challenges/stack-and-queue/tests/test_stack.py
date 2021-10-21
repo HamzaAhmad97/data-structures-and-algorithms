@@ -1,4 +1,4 @@
-from stack_and_queue.stack import Stack
+from stack_and_queue.stack import Stack, EmptyStackException
 from stack_and_queue.node import Node
 import pytest
 
@@ -46,3 +46,8 @@ def test_can_instantiate_empty_stack_via_peak(send_empty_stack):
     expected = None
     actual = send_empty_stack.peak()
     assert actual == expected
+
+def test_peek_raises_exception_when_called_on_empty_stack(send_empty_stack):
+    with pytest.raises(EmptyStackException, match="Stack is empty, can't peek.")
+        send_empty_stack.peek()
+
