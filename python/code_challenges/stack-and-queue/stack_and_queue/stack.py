@@ -16,6 +16,7 @@ class Stack():
     """
     A class representing a stack.
     """
+
     def __init__(self):
         """
         The constructor method for the class Stack. Initialize top.

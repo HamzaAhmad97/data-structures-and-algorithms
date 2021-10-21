@@ -2,6 +2,7 @@ from inspect import currentframe
 from stack_and_queue.node import Node
 #from node import Node
 
+
 class EmptyQueueException(Exception):
     """
     An exception representing a queue is empty.
@@ -11,16 +12,19 @@ class EmptyQueueException(Exception):
     """
     pass
 
+
 class Queue():
     """
     A class representing a stack.
     """
+
     def __init__(self):
         """
         The constructor method for the class Queue. Initialize front and rear.
         """
         self.front = None
         self.rear = None
+
     def __str__(self):
         """
         Return a string representation for a queue.
@@ -99,12 +103,13 @@ class Queue():
         """
         return not self.front
 
+
 if __name__ == "__main__":
     queue = Queue()
     queue.enqueue(1)
     queue.enqueue(2)
     queue.enqueue(3)
     print(queue)
-    # print(queue.dequeue())
-    # print(queue.is_empty())
-    # print(queue.peek())
+    print(queue.dequeue())
+    print(queue.is_empty())
+    print(queue.peek())
