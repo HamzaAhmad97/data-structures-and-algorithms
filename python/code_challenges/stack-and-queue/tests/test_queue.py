@@ -60,4 +60,10 @@ def test_queue_gets_empty_after_multiple_dequeues(queue):
     assert not (queue.front or queue.rear)
 
 
+def test_can_instantiate_empty_queue_by_class(empty_queue):
+    expected = "Queue"
+    actual = empty_queue.__class__.__name__
+    assert actual == expected
+
+
 
