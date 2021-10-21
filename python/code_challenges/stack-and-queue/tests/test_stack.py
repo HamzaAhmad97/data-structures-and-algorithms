@@ -25,3 +25,9 @@ def test_pop_off_stack(send_stack):
     expected = 2
     actual = send_stack.pop()
     assert expected == actual
+
+def test_stack_is_empty_when_popping_all_nodes(send_stack):
+    send_stack.pop()
+    send_stack.pop()
+    actual = send_stack.top
+    assert not actual
