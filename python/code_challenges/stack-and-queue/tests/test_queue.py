@@ -42,3 +42,8 @@ def test_queue_dequeue_raises_exception_when_empty(empty_queue):
     empty_queue.dequeue()
 
 
+def test_queue_peek_raises_exception_when_empty(empty_queue):
+    with pytest.raises(EmptyQueueException, match="Queue is empty, can't peek.")
+    empty_queue.peek()
+
+
