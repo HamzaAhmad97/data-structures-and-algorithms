@@ -53,3 +53,11 @@ def test_queue_peek(queue):
     assert actual == expected
 
 
+def test_queue_gets_empty_after_multiple_dequeues(queue):
+    expected = None
+    queue.dequeue()
+    queue.dequeue()
+    assert not (queue.front or queue.rear)
+
+
+
