@@ -37,3 +37,8 @@ def test_queue_dequeue(queue):
     assert actual == expected
 
 
+def test_queue_dequeue_raises_exception_when_empty(empty_queue):
+    with pytest.raises(EmptyQueueException, match="Queue is empty, can't dequeue.")
+    empty_queue.dequeue()
+
+
