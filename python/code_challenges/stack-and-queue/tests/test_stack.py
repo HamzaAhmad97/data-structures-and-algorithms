@@ -21,4 +21,7 @@ def test_push_onto_stack_multiple_values(send_stack):
     actual = send_stack.top.value
     assert actual == expected
 
-
+def test_pop_off_stack(send_stack):
+    expected = 2
+    actual = send_stack.pop()
+    assert expected == actual
