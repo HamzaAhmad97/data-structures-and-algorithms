@@ -47,3 +47,9 @@ def test_queue_peek_raises_exception_when_empty(empty_queue):
     empty_queue.peek()
 
 
+def test_queue_peek(queue):
+    expected = 1
+    actual = queue.peek()
+    assert actual == expected
+
+
