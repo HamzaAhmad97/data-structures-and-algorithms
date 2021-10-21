@@ -41,3 +41,8 @@ def test_can_instantiate_empty_stack_by_class(send_empty_stack):
     expected = "Stack"
     actual = send_empty_stack.__class__.__name__
     assert actual == expected
+
+def test_can_instantiate_empty_stack_via_peak(send_empty_stack):
+    expected = None
+    actual = send_empty_stack.peak()
+    assert actual == expected
