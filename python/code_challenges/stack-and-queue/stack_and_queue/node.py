@@ -2,7 +2,8 @@ class Node:
     """
     A class representing a node.
     """
-    def __init__(self, value = None):
+
+    def __init__(self, value=None):
         """
         The constructor method for the Node class. Initialize value and next.
 
@@ -11,6 +12,7 @@ class Node:
         """
         self.value = value
         self.next = None
+
     def __str__(self):
         """
         Return a string representation of the node.
