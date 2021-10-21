@@ -91,7 +91,7 @@ class LinkedList:
             current = current.next_
         return False
 
-    def to_string(self):
+    def __str__(self):
         """
         Return a string representation of the linked list
         Returns:
@@ -240,12 +240,17 @@ def zip_lists(j, k):
         if not (curk or curj):
             return new
 
+def check_palindrome(ll):
+    current = ll.head
+    new = LinkedList()
+    while current:
+        new.insert(current.value)
+        current = current.next_
+    return str(new) == str(ll)
 
 if __name__ == "__main__":
     ll = LinkedList()
+ 
+    print(ll)
+    print(check_palindrome(ll))
 
-    print(ll.to_string())
-    kk = LinkedList()
-
-    print(kk.to_string())
-    print(zip_lists(ll,kk).to_string())
