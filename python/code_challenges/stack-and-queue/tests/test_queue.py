@@ -31,4 +31,9 @@ def test_queue_enqueue_with_multiple_nodes(empty_queue):
     assert actual == expected
 
 
+def test_queue_dequeue(queue):
+    expected = 1
+    actual = queue.dequeue().value
+    assert actual == expected
+
 
