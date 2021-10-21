@@ -66,4 +66,7 @@ def test_can_instantiate_empty_queue_by_class(empty_queue):
     assert actual == expected
 
 
-
+def test_can_instantiate_empty_queue_via_peek(queue):
+    expected = 1
+    actual = queue.peek()
+    assert actual == expected
