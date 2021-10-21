@@ -16,7 +16,6 @@ For all of the methods related to adding and removing nodes from both a stack an
 
 1. Stack
 
-    - `__str__()`: Return a string representation for a stack.
     - `push(value)`: Push nodes onto the stack.
     - `pop()`: Pop a node from the top of a stack.
     - `is_empty()`: Check if the stack is empty.
@@ -24,7 +23,6 @@ For all of the methods related to adding and removing nodes from both a stack an
 
 2. Queue
 
-    - `__str__()`: Return a string representation for a queue.
     - `enqueue(value)`: Push/ enqueue nodes to the back of a queue.
     - `dequeue()`: Remove/ dequeue a node from the front of a queue.
     - `is_empty()`: Check if the queue is empty.
