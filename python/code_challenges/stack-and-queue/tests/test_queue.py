@@ -27,24 +27,24 @@ def test_queue_enqueue_with_multiple_nodes(empty_queue):
     expected = 2
     empty_queue.enqueue(1)
     empty_queue.enqueue(2)
-    actual = empty_queue.front.value
+    actual = empty_queue.rear.value
     assert actual == expected
 
 
 def test_queue_dequeue(queue):
     expected = 1
-    actual = queue.dequeue().value
+    actual = queue.dequeue()
     assert actual == expected
 
 
 def test_queue_dequeue_raises_exception_when_empty(empty_queue):
-    with pytest.raises(EmptyQueueException, match="Queue is empty, can't dequeue.")
-    empty_queue.dequeue()
+    with pytest.raises(EmptyQueueException, match="Queue is empty, can't dequeue."):
+        empty_queue.dequeue()
 
 
 def test_queue_peek_raises_exception_when_empty(empty_queue):
-    with pytest.raises(EmptyQueueException, match="Queue is empty, can't peek.")
-    empty_queue.peek()
+    with pytest.raises(EmptyQueueException, match="Queue is empty, can't peek."):
+        empty_queue.peek()
 
 
 def test_queue_peek(queue):
@@ -54,10 +54,9 @@ def test_queue_peek(queue):
 
 
 def test_queue_gets_empty_after_multiple_dequeues(queue):
-    expected = None
     queue.dequeue()
     queue.dequeue()
-    assert not (queue.front or queue.rear)
+    assert queue.is_empty()
 
 
 def test_can_instantiate_empty_queue_by_class(empty_queue):
