@@ -10,6 +10,8 @@ This challenge requires you to append, insert_after, insert_before and the delet
 
 ![](./vis.png)
 
+![](./visual.png)
+
 ## Approach & Efficiency
 
 Each of the methods does not implement any sequencial data structures like lists, it is just a matter of removing assignments and reassigning again and so on that is why the space effeciency is O(1) for all of the methods, and the time effeciency is O(N) since we have to loop maximum N times assuming that the size of the input is N.
