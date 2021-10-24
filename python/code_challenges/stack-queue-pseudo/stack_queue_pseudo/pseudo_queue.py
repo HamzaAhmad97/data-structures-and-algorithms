@@ -82,7 +82,6 @@ class PseudoQueue:
                 self.taker.push(current.value)
                 current = current.next
 
-
 if __name__ == "__main__":
     pseudo = PseudoQueue()
     pseudo.enqueue(1)
