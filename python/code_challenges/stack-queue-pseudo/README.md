@@ -5,7 +5,8 @@ This challenge requires defining a pseudo queue class that has two methods, enqu
 ## [Latest open pull request](https://github.com/HamzaAhmad97/data-structures-and-algorithms/pull/28)
 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+
+![](./wb.png)
 
 ## Approach & Efficiency
 
