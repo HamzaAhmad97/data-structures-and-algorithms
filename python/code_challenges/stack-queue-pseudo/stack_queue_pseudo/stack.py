@@ -1,4 +1,4 @@
-from stack_queue_pseudo.node import Node
+from node import Node
 
 class EmptyStackException(Exception):
     """
