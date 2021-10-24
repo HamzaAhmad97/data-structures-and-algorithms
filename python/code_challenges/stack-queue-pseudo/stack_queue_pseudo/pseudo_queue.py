@@ -1,3 +1,4 @@
+from 
 class EmptyPseudoQueueException(Exception):
     pass
 
