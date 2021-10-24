@@ -22,7 +22,7 @@ def test_enqueue_one_node_to_empty_pseudo_queue(empty_pseudo_queue):
     Args:
         empty_pseudo_queue (PseudoQueue): An empty PseudoQueue instance.
     """
-    empty_pseudo_queue.push(1)
+    empty_pseudo_queue.enqueue(1)
     expected = 1
     actual = empty_pseudo_queue.dequeue()
     assert actual == expected
@@ -34,8 +34,8 @@ def test_enqueue_multiple_nodes_to_pseudo_queue(empty_pseudo_queue):
     Args:
         empty_pseudo_queue (PseudoQueue): An empty PseudoQueue instance.
     """
-    empty_pseudo_queue.push(1)
-    empty_pseudo_queue.push(2)
+    empty_pseudo_queue.enqueue(1)
+    empty_pseudo_queue.enqueue(2)
     expected = 1
     actual = empty_pseudo_queue.dequeue()
     assert actual == expected

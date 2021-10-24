@@ -1,4 +1,4 @@
-from stack import Stack
+from stack_queue_pseudo.stack import Stack
 
 
 class EmptyPseudoQueueException(Exception):
