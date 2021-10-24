@@ -2,7 +2,9 @@
 
 This challenge requires you to append, insert_after, insert_before and the delete_node methods, to append a node to the end of a linked list, insert a node after another node given its value, insert a node before another node given its value, and delete a node given its value respectively.
 
+
 ## [Latest open pull request](https://github.com/HamzaAhmad97/data-structures-and-algorithms/pull/24)
+
 
 ## Whiteboard Process
 
@@ -10,7 +12,9 @@ This challenge requires you to append, insert_after, insert_before and the delet
 
 ![](./vis.png)
 
+
 ![](./visual.png)
+
 
 ## Approach & Efficiency
 
