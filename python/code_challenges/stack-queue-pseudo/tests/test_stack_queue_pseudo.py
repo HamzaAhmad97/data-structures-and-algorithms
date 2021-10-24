@@ -22,4 +22,7 @@ def test_enqueue_multiple_nodes_to_pseudo_queue(empty_pseudo_queue):
     actual = empty_pseudo_queue.dequeue()
     assert actual == expected
 
+def test_dequeue_raises_exception_when_pseudo_queue_is_empty(empty_pseudo_queue):
+    with pytest.raises(EmptyPseudoQueueException, match="Pseudo queue is empty, can't dequeue."):
+        empty_pseudo_queue.dequeue()
 
