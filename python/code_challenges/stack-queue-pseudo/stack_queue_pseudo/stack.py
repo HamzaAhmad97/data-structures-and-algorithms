@@ -1,6 +1,5 @@
 from stack_queue_pseudo.node import Node
 
-
 class EmptyStackException(Exception):
     """
     An exception representing a stack is empty.

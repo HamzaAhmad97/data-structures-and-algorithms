@@ -1,6 +1,6 @@
 import pytest
 from stack_queue_pseudo import __version__
-
+from stack_queue_pseudo.pseudo_queue import PseudoQueue, EmptyPseudoQueueException
 
 def test_version():
     assert __version__ == '0.1.0'
