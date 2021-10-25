@@ -21,3 +21,9 @@ def test_enqueue_one_a_dog(animal_shelter,dog):
     animal_shelter.enqueue(dog)
     actual = animal_shelter.dequeue('dog').name
     assert actual == expected
+
+def test_enqueue_one_a_cat(animal_shelter,cat):
+    expected = "Meme"
+    animal_shelter.enqueue(cat)
+    actual = animal_shelter.dequeue('cat').name
+    assert actual == expected
