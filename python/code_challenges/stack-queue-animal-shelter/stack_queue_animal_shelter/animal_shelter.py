@@ -18,3 +18,5 @@ class Cat:
     def __str__(self):
         return f"Name: {self.name} | Age: {self.age} | Type: {Cat.TYPE} | Next: {self.next}"
 
+class NoSuchTypeEexception(Exception):
+    pass
