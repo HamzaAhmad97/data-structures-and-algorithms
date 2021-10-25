@@ -12,4 +12,4 @@
 | Challenge 08 | [linked list zip](https://github.com/HamzaAhmad97/data-structures-and-algorithms/blob/main/python/code_challenges/linked-list-zip/README.md) |
 | Challenge 09 | [Mock Interview]() |
 | Challenge 10 | [Stacks and Queues](https://github.com/HamzaAhmad97/data-structures-and-algorithms/blob/main/python/code_challenges/stack-and-queue/README.md) |
-
+| Challenge 11 | [Queues Pseudo](https://github.com/HamzaAhmad97/data-structures-and-algorithms/blob/main/python/code_challenges/stack-queue-pseudo/README.md) |
