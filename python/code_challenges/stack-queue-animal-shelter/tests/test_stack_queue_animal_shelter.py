@@ -29,10 +29,10 @@ def test_enqueue_one_a_cat(animal_shelter,cat):
     assert actual == expected
 
 def test_dequeue_raises_an_exception_if_type_is_empty(animal_shelter):
-    with pytest.raises(NoSuchTypeEexception, match='Type specified does not exist.'):
+    with pytest.raises(NoSuchTypeEexception):
         animal_shelter.dequeue('dog')
 
 def test_dequeue_raises_an_exception_if_type_is_other_than_a_dog_or_cat(animal_shelter,cat):
     animal_shelter.enqueue(cat)
-    with pytest.raises(NoSuchTypeEexception, match='Typr specified is not a cat nor a dog.'):
+    with pytest.raises(NoSuchTypeEexception):
         animal_shelter.dequeue('horse')
