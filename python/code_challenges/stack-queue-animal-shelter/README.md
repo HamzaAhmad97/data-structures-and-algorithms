@@ -2,7 +2,7 @@
 
 This challenge requires defining an animal shelter class that accepts an animal object, which can be of type Cat or Dog. The animal shelter can enqueue an animal type object, as it also can dequeue the animal of the preference type if its queue is not empty, else it will throw an exception.
 
-## [Latest Pull Request]()
+## [Latest Pull Request](https://github.com/HamzaAhmad97/data-structures-and-algorithms/pull/29)
 
 ## Whiteboard Process
 
