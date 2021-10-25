@@ -1,5 +1,7 @@
-from stack_queue_animal_shelter import __version__
 import pytest
+from stack_queue_animal_shelter import __version__
+from stack_queue_animal_shelter.animal_shelter import Dog, Cat, NoSuchTypeEexception, AnimalShelter
+
 
 def test_version():
     assert __version__ == '0.1.0'
