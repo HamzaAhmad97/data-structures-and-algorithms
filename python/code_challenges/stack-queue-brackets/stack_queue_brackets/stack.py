@@ -52,6 +52,12 @@ class Stack():
         node.next = self.top
         self.top = node
 
+        try:
+            if self.top.next.value + self.top.value in ['[]','()','{}']:
+                    self.pop();self.pop()
+        except:
+            pass
+
     def pop(self):
         """
         Pop a node from the top of a stack.
