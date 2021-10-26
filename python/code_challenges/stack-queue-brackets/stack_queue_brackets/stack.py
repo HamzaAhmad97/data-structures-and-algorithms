@@ -1,5 +1,4 @@
-
-from node import Node
+from stack_queue_brackets.node import Node
 
 
 class EmptyStackException(Exception):
@@ -51,10 +50,13 @@ class Stack():
             return
         node.next = self.top
         self.top = node
-
+        """
+        This part of the method checks if two added brackets even out and then removes them.
+        """
         try:
-            if self.top.next.value + self.top.value in ['[]','()','{}']:
-                    self.pop();self.pop()
+            if self.top.next.value + self.top.value in ['[]', '()', '{}']:
+                self.pop()
+                self.pop()
         except:
             pass
 
@@ -97,6 +99,3 @@ class Stack():
         if self.is_empty():
             raise EmptyStackException("Stack is empty, can't peek.")
         return self.top.value
-
-
-
