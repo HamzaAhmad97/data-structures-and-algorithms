@@ -14,3 +14,6 @@
 | Challenge 10 | [Stacks and Queues](https://github.com/HamzaAhmad97/data-structures-and-algorithms/blob/main/python/code_challenges/stack-and-queue/README.md) |
 | Challenge 11 | [Queues Pseudo](https://github.com/HamzaAhmad97/data-structures-and-algorithms/blob/main/python/code_challenges/stack-queue-pseudo/README.md) |
 | Challenge 12 | [Animal Shelter](https://github.com/HamzaAhmad97/data-structures-and-algorithms/blob/main/python/code_challenges/stack-queue-animal-shelter/README.md) |
+| Challenge 13 | [Validate Brackets](https://github.com/HamzaAhmad97/data-structures-and-algorithms/blob/main/python/code_challenges/stack-queue-brackets/README.md) |
+
+
