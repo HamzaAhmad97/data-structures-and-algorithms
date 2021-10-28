@@ -6,6 +6,7 @@ authors = ["HamzaAhmad97 <h.radiahmad@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+pytest = "^5.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
