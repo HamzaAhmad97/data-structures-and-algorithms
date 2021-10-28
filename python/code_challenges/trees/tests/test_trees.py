@@ -24,5 +24,9 @@ def test_adding_a_left_child_and_a_right_child():
     actual = (bt.root.left.value, bt.root.right,value)
     assert actual == expected
 
-
+def test_returning_a_collection_from_a_preorder_traversal():
+    expected = "abdecf"
+    bt = BinarySearchTree("a","b","c","d","e","f")
+    actual = "".join(bt.pre_order(bt.root))
+    assert actual == expected
 
