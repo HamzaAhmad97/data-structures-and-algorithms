@@ -16,5 +16,13 @@ def test_instantiating_a_tree_with_a_single_root_node():
     actual = bt.root.value
     assert actual == expected
 
+def test_adding_a_left_child_and_a_right_child():
+    expected = ("b","c")
+    bt = BinarySearchTree()
+    bt.add("b")
+    bt.add("c")
+    actual = (bt.root.left.value, bt.root.right,value)
+    assert actual == expected
+
 
 
