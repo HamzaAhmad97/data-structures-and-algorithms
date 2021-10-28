@@ -36,4 +36,8 @@ def test_returning_a_collection_from_a_inorder_traversal():
     actual = "".join(bt.pre_order(bt.root))
     assert actual == expected
 
-
+def test_returning_a_collection_from_a_postorder_traversal():
+    expected = "debfca"
+    bt = BinarySearchTree("a","b","c","d","e","f")
+    actual = "".join(bt.pre_order(bt.root))
+    assert actual == expected
