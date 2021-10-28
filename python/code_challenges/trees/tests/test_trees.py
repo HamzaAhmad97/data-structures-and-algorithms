@@ -1,5 +1,5 @@
 from trees import __version__
-
+from trees.binary_search_tree import BinarySearchTree
 
 def test_version():
     assert __version__ == '0.1.0'
@@ -19,9 +19,10 @@ def test_instantiating_a_tree_with_a_single_root_node():
 def test_adding_a_left_child_and_a_right_child():
     expected = ("b","c")
     bt = BinarySearchTree()
+    bt.add("a")
     bt.add("b")
     bt.add("c")
-    actual = (bt.root.left.value, bt.root.right,value)
+    actual = (bt.root.left.value, bt.root.right.value)
     assert actual == expected
 
 def test_returning_a_collection_from_a_preorder_traversal():
@@ -33,11 +34,11 @@ def test_returning_a_collection_from_a_preorder_traversal():
 def test_returning_a_collection_from_a_inorder_traversal():
     expected = "dbeafc"
     bt = BinarySearchTree("a","b","c","d","e","f")
-    actual = "".join(bt.pre_order(bt.root))
+    actual = "".join(bt.in_order(bt.root))
     assert actual == expected
 
 def test_returning_a_collection_from_a_postorder_traversal():
     expected = "debfca"
     bt = BinarySearchTree("a","b","c","d","e","f")
-    actual = "".join(bt.pre_order(bt.root))
+    actual = "".join(bt.post_order(bt.root))
     assert actual == expected

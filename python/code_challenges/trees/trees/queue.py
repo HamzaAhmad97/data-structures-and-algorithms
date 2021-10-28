@@ -1,3 +1,6 @@
+from trees.node import Node
+from trees.exceptions import EmptyQueueException
+
 class Queue:
     """
     A class representing a stack.

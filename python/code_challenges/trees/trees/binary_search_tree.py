@@ -1,6 +1,12 @@
+from trees.node import Node
+from trees.queue import Queue
+from trees.binary_tree import BinaryTree
+
+
 class BinarySearchTree(BinaryTree):
 
     def __init__(self, *args):
+        super().__init__()
         for itm in args:
             self.add(itm)
 

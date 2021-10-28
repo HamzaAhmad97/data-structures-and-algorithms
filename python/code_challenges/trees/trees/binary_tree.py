@@ -1,3 +1,6 @@
+from trees.exceptions import EmptyTree
+
+
 class BinaryTree:
 
     def __init__(self):
@@ -8,7 +11,8 @@ class BinaryTree:
         if not self.root:
             raise EmptyTree("Tree is empty. Operation is invalid.")
 
-        print(root.value)
+        print(root.left, root.right)
+        self.nodes.append(root.value)
 
         if root.left:
             self.pre_order(root.left)
@@ -16,9 +20,8 @@ class BinaryTree:
         if root.right:
             self.pre_order(root.right)
 
-        self.nodes.append(root.value)
-        if root == self.root:
-           return self.nodes
+        if root:
+            return self.nodes
 
     def in_order(self, root):
         if not self.root:
@@ -28,13 +31,12 @@ class BinaryTree:
             self.in_order(root.left)
 
         print(root.value)
-
+        self.nodes.append(root.value)
         if root.right:
             self.in_order(root.right)
 
-        self.nodes.append(root.value)
-        if root == self.root:
-           return self.nodes
+        if root:
+            return self.nodes
 
     def post_order(self, root):
         if not self.root:
@@ -50,4 +52,4 @@ class BinaryTree:
 
         self.nodes.append(root.value)
         if root == self.root:
-           return self.nodes
+            return self.nodes
