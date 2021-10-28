@@ -1,3 +1,5 @@
+import pytest
+from trees.exceptions import EmptyTree
 from trees import __version__
 from trees.binary_search_tree import BinarySearchTree
 
@@ -42,3 +44,9 @@ def test_returning_a_collection_from_a_postorder_traversal():
     bt = BinarySearchTree("a","b","c","d","e","f")
     actual = "".join(bt.post_order(bt.root))
     assert actual == expected
+
+def test_traversal_over_an_empty_tree_raises_an_exception():
+    bt = BinarySearchTree()
+    with pytest.raises(EmptyTree):
+        bt.pre_order(bt.root)
+
