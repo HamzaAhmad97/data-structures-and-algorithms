@@ -1,5 +1,10 @@
-from trees.exceptions import EmptyTree
-
+from tree_max.exceptions import EmptyTree
+from tree_max.queue import Queue
+from tree_max.node import Node
+# from exceptions import EmptyTree
+# from queue import Queue
+# from node import Node
+import math
 
 class BinaryTree:
     """
@@ -12,6 +17,7 @@ class BinaryTree:
         """
         self.nodes = []
         self.root = None
+        self.max = -math.inf
 
     def pre_order(self, root):
         """
@@ -95,3 +101,5 @@ class BinaryTree:
         self.nodes.append(root.value)
         if root == self.root:
             return self.nodes
+
+

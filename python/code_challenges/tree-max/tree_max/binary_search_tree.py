@@ -1,7 +1,12 @@
-from trees.node import Node
-from trees.queue import Queue
-from trees.binary_tree import BinaryTree
-
+from tree_max.node import Node
+from tree_max.queue import Queue
+from tree_max.binary_tree import BinaryTree
+from tree_max.exceptions import EmptyTree
+# from node import Node
+# from queue import Queue
+# from binary_tree import BinaryTree
+# from exceptions import EmptyTree
+import math
 
 class BinarySearchTree(BinaryTree):
     """
@@ -81,3 +86,33 @@ class BinarySearchTree(BinaryTree):
             if front.right:
                 q.enqueue(front.right)
         return representation
+
+    def max_value(self):
+        """
+        Rreturn the maximum value in a tree.
+
+        Raises:
+            EmptyTree: If the tree is empty.
+
+        Returns:
+            int: The maximum value in the tree.
+        """
+        if not self.root:
+            raise EmptyTree('Tree is empty, cannot perform max_value() on an empty tree.')
+        max = -math.inf
+        breadth = Queue()
+        breadth.enqueue(self.root)
+        while not breadth.is_empty():
+           front = breadth.dequeue()
+           max = front.value if (front.value >= max) else max
+
+           if front.left:
+               breadth.enqueue(front.left)
+
+           if front.right:
+               breadth.enqueue(front.right)
+        return max
+
+if __name__ == "__main__":
+    bt = BinarySearchTree(*[1,2,3,4,5,6])
+    print(bt.max_value())

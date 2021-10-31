@@ -1,6 +1,6 @@
 import pytest
 from tree_max import __version__
-
+from tree_max.binary_search_tree import BinarySearchTree
 
 def test_version():
     assert __version__ == '0.1.0'
@@ -10,10 +10,10 @@ def test_version():
     "values, max",
     [
         ([1,2,3,4,5,6], 6),
-        ([0,0,4,8,6,-1,20], 20),
+        ([1,1,4,8,6,-1,20], 20),
         ([5,1,1,1,1],5),
         ([-5,-2,-1,0,0],0),
-        ([0,1,0,1,0,1],1),
+        ([2,2,1,1,2,2],2),
         ([2],2),
     ],
 )

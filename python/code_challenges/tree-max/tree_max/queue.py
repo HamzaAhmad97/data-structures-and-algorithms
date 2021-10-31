@@ -1,5 +1,7 @@
-from trees.node import Node
-from trees.exceptions import EmptyQueueException
+from tree_max.node import Node
+from tree_max.exceptions import EmptyQueueException
+# from node import Node
+# from exceptions import EmptyQueueException
 
 class Queue:
     """
@@ -77,8 +79,8 @@ class Queue:
         Returns:
             any: The value of the front node.
         """
-        if self.is_empty():
-            raise EmptyQueueException("Queue is empty, can't peek.")
+        if not self.front:
+            raise EmptyQueueException("Queue is empty, can't peek!")
         return self.front.value
 
     def is_empty(self):
@@ -89,3 +91,8 @@ class Queue:
             bool: True if queue is empty, False otherwise.
         """
         return not self.front
+
+if __name__ == "__main__":
+    q = Queue()
+    q.enqueue(Node(1))
+    print(q.peek())
