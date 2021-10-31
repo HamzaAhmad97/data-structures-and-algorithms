@@ -18,5 +18,12 @@ def test_version():
     ],
 )
 def test_max_value(values, max):
+    """
+    Test if the method max_value returns the correct max value when passing a number of integers as a list.
+
+    Args:
+        values (list): A list of values to be added to the tree.
+        max (int): The maximum value in the tree.
+    """
     bt = BinarySearchTree(*values)
     assert bt.max_value() == max
