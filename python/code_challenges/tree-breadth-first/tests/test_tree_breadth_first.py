@@ -18,5 +18,12 @@ def test_version():
     ],
 )
 def test_breadth_first(values, result):
+    """
+    Test if the function breadth_first returns a list containing the values of the nodes of the passed binary search tree in the correct order following breadth first search.
+
+    Args:
+        values (list): A list of values to be added to the binary search tree.
+        result (list): List of values retreived from the nodes of the tree following breadth first search.
+    """
     bt = BinarySearchTree(*values)
     assert breadth_first(bt) == result
