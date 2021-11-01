@@ -17,4 +17,6 @@
 | Challenge 13 | [Validate Brackets](https://github.com/HamzaAhmad97/data-structures-and-algorithms/blob/main/python/code_challenges/stack-queue-brackets/README.md) |
 | Challenge 14 | [Mock Interview]() |
 | Challenge 15 | [Binary Trees](https://github.com/HamzaAhmad97/data-structures-and-algorithms/blob/main/python/code_challenges/trees/README.md) |
+| Challenge 16 | [Tree Max](https://github.com/HamzaAhmad97/data-structures-and-algorithms/blob/main/python/code_challenges/tree-max/README.md) |
+
 
