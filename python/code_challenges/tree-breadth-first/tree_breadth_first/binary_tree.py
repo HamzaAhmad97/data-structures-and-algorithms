@@ -1,6 +1,6 @@
-from tree_max.exceptions import EmptyTree
-from tree_max.queue import Queue
-from tree_max.node import Node
+from tree_breadth_first.exceptions import EmptyTree
+from tree_breadth_first.queue import Queue
+from tree_breadth_first.node import Node
 # from exceptions import EmptyTree
 # from queue import Queue
 # from node import Node

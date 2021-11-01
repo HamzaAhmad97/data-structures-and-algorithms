@@ -1,5 +1,7 @@
+import pytest
 from tree_breadth_first import __version__
-
+from tree_breadth_first.breadth_first import breadth_first
+from tree_breadth_first.binary_search_tree import BinarySearchTree
 
 def test_version():
     assert __version__ == '0.1.0'
