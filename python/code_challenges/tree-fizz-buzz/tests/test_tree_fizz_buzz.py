@@ -1,5 +1,5 @@
 from tree_fizz_buzz import __version__
-
+from fizz_buzz_tree import fizz_buzz_tree, KTree
 
 def test_version():
     assert __version__ == '0.1.0'
