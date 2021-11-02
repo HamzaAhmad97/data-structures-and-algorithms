@@ -10,3 +10,9 @@ def test_fizz_buzz_tree_k_1():
     actual = fizz_buzz_tree(kt).front.value
     assert actual == expected
 
+def test_fizz_buzz_tree_k_2():
+    expected = " 1 | 2 | Fizz | 4 |"
+    kt = KTree(2,1,2,3,4)
+    actual = str(fizz_buzz_tree(kt))
+    assert expected == actual
+
