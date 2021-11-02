@@ -16,3 +16,8 @@ def test_fizz_buzz_tree_k_2():
     actual = str(fizz_buzz_tree(kt))
     assert expected == actual
 
+def test_fizz_buzz_tree_k_4():
+    expected = " 1 | 2 | Fizz | 4 | Buzz | Fizz | 7 | 8 | Fizz | Buzz | 11 | Fizz | 13 | 14 | FizzBuzz | 16 |"
+    kt = KTree(2, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)
+    actual = str(fizz_buzz_tree(kt))
+    assert actual == expected
