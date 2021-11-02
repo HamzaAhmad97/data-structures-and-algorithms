@@ -1,5 +1,5 @@
 from tree_fizz_buzz import __version__
-from fizz_buzz_tree import fizz_buzz_tree, KTree
+from tree_fizz_buzz.fizz_buzz_tree import fizz_buzz_tree, KTree
 
 def test_version():
     assert __version__ == '0.1.0'
@@ -8,9 +8,9 @@ def test_fizz_buzz_tree_k_1():
     """
     Test fizz_buzz_tree function with a tree of k = 1
     """
-    expected = "1"
+    expected = 1
     kt = KTree(1,1)
-    actual = fizz_buzz_tree(kt).front.value
+    actual = kt.root.value
     assert actual == expected
 
 def test_fizz_buzz_tree_k_2():

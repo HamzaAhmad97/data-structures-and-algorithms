@@ -180,7 +180,7 @@ class KTree(BinaryTree):
         representation = ""
         while not q.is_empty():
             front = q.dequeue()
-            representation += f"(Value > {front.value} %%% children > {[str(child) for child in front.children]}) \n"
+            representation += f" {front.value} |"
             for child in front.children:
                 if child:
                     q.enqueue(child)
@@ -304,7 +304,7 @@ def fizz_buzz_tree(kary_tree):
 
         for child in front.children:
             q.enqueue(child)
-    return new_tree
+    return str(new_tree)
 
 if __name__ == "__main__":
     bt = KTree(4, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)
