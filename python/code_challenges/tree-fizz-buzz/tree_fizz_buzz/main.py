@@ -278,6 +278,15 @@ class Queue:
 
 
 def fizz_buzz_tree(kary_tree):
+    """
+    A function to return the same tree but with the values of the nodes replaced with either Fizz, Buzz or FizzBuzz.
+
+    Args:
+        kary_tree (KTree): A K-arry tree.
+
+    Returns:
+        KTree: A new K-arry tree with the new values based on the values of the input tree.
+    """
     new_tree = KTree(3)
     q = Queue()
     q.enqueue(kary_tree.root)
