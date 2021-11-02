@@ -2,6 +2,8 @@
 
 Define a function called fizz_buzz_tree that accepts a k-ary tree and returns a new k-ary tree of the same size with the values of the nodes replaced with either "Fizz", "Buzz", or "FizzBuzz".
 
+## [Latest Open Pull Request](https://github.com/HamzaAhmad97/data-structures-and-algorithms/pull/34)
+
 ## Whiteboard Process
 
 ![](./kt.png)
