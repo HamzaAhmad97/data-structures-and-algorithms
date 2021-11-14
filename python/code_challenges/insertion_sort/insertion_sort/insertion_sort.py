@@ -9,3 +9,7 @@ def insertion_sort(li):
       
     li[j + 1] = temp 
   return li
+
+if __name__ == "__main__":
+    li = [5,8,1,10]
+    print(insertion_sort(li))

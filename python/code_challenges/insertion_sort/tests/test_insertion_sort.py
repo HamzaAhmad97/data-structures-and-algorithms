@@ -12,4 +12,4 @@ from insertion_sort.insertion_sort import insertion_sort
 )
 def test_max_value(array, sorted_array):
 
-    assert insertion_sort(array, sorted_array)
+    assert insertion_sort(array) == sorted_array
