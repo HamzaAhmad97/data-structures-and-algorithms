@@ -1,12 +1,13 @@
-from tree_breadth_first.node import Node
-from tree_breadth_first.queue import Queue
-from tree_breadth_first.binary_tree import BinaryTree
-from tree_breadth_first.exceptions import EmptyTree
-# from node import Node
-# from queue import Queue
-# from binary_tree import BinaryTree
-# from exceptions import EmptyTree
+# from tree_breadth_first.node import Node
+# from tree_breadth_first.queue import Queue
+# from tree_breadth_first.binary_tree import BinaryTree
+# from tree_breadth_first.exceptions import EmptyTree
+from node import Node
+from queue import Queue
+from binary_tree import BinaryTree
+from exceptions import EmptyTree
 import math
+
 
 class BinarySearchTree(BinaryTree):
     """
@@ -98,21 +99,42 @@ class BinarySearchTree(BinaryTree):
             int: The maximum value in the tree.
         """
         if not self.root:
-            raise EmptyTree('Tree is empty, cannot perform max_value() on an empty tree.')
+            raise EmptyTree(
+                'Tree is empty, cannot perform max_value() on an empty tree.')
         max = -math.inf
         breadth = Queue()
         breadth.enqueue(self.root)
         while not breadth.is_empty():
-           front = breadth.dequeue()
-           max = front.value if (front.value >= max) else max
+            front = breadth.dequeue()
+            max = front.value if (front.value >= max) else max
 
-           if front.left:
-               breadth.enqueue(front.left)
+            if front.left:
+                breadth.enqueue(front.left)
 
-           if front.right:
-               breadth.enqueue(front.right)
+            if front.right:
+                breadth.enqueue(front.right)
         return max
 
+    def check_leaves(self, otherTree):
+
+        def check(root):
+            count = 0
+            q = Queue()
+            q.enqueue(root)
+            while not q.is_empty():
+                front = q.dequeue()
+                if front.left:
+                    q.enqueue(front.left)
+                if front.right:
+                    q.enqueue(front.right)
+                if not front.left or not front.right:
+                    count += 1
+            return count
+
+        return check(self.root) == check(otherTree.root)
+
+
 if __name__ == "__main__":
-    bt = BinarySearchTree(*[1,2,3,4,5,6])
-    print(bt.max_value())
+    bt = BinarySearchTree(*[1, 2, 3, 4, 5, 6])
+    ot = BinarySearchTree(*[])
+    print(bt.check_leaves(ot))
