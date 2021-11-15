@@ -1,7 +1,7 @@
-from tree_breadth_first.node import Node
-from tree_breadth_first.exceptions import EmptyQueueException
-# from node import Node
-# from exceptions import EmptyQueueException
+# from tree_breadth_first.node import Node
+# from tree_breadth_first.exceptions import EmptyQueueException
+from node import Node
+from exceptions import EmptyQueueException
 
 class Queue:
     """

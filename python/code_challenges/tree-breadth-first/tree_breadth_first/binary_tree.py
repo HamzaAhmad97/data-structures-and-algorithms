@@ -1,9 +1,9 @@
-from tree_breadth_first.exceptions import EmptyTree
-from tree_breadth_first.queue import Queue
-from tree_breadth_first.node import Node
-# from exceptions import EmptyTree
-# from queue import Queue
-# from node import Node
+# from tree_breadth_first.exceptions import EmptyTree
+# from tree_breadth_first.queue import Queue
+# from tree_breadth_first.node import Node
+from exceptions import EmptyTree
+from queue import Queue
+from node import Node
 import math
 
 class BinaryTree:
