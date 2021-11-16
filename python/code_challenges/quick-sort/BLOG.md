@@ -66,7 +66,7 @@ The rest are single element arrays, and now the array is sorted.
     
 ## Whiteboard
  
-![](./qs)
+![](./qs.png)
  
  
  
