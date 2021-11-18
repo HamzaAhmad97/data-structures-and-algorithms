@@ -13,3 +13,7 @@ def test_hashtable_contains_bare_value(hashtable):
     hashtable.add("name","Hamza")
     assert hashtable.contains("name")
     
+def test_hashable_contains_pair_in_a_linked_list(hashtable):
+    hashtable.add("name", "Hamza")
+    hashtable.add("name", "Alan")
+    assert hashtable.contains("name")

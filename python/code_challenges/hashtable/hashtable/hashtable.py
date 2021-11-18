@@ -53,7 +53,7 @@ class Hashtable:
         index = self.__hash(key)
         value = self.__buckets[index]
         if value:
-            if isinstance(value, 'LinkedList'):
+            if isinstance(value, LinkedList):
                 current = value.head
                 while current:
                     if current.value[0] == key:
