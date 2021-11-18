@@ -64,5 +64,5 @@ class Hashtable:
 
 if __name__ == "__main__":
     ht = Hashtable()
-    print(ht._Hashtable__hash("name"))
+    print(ht._Hashtable__hash("something000"))
     

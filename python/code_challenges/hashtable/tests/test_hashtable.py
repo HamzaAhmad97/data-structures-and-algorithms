@@ -26,3 +26,15 @@ def test_hashable_add_same_key(hashtable):
     hashtable.add("a", "a")
     hashtable.add("a", "a")
     assert hashtable.contains("a")
+
+@pytest.mark.parametrize(
+    "key,hashcode",
+    [
+       ("a", 679),
+       ("ab", 341),
+       ("hello", 652),
+       ("something000", 658)
+    ]
+)
+def test_hashtable_hash(key,hashcode, hashtable):
+    assert hashtable._Hashtable__hash(key) == hashcode
