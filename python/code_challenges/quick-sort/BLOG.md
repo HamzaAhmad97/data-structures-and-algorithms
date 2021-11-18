@@ -63,10 +63,6 @@ Since 5 is the last number to compare against, we swap between it and 7.
 The rest are single element arrays, and now the array is sorted.
     
 ![](./i.png)
-    
-## Whiteboard
- 
-![](./qs.png)
- 
+
  
  
