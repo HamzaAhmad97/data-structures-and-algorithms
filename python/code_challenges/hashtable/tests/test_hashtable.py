@@ -48,3 +48,7 @@ def test_hashtable_get_returns_correct_last_value(hashtable):
     hashtable.add("name", "Hamza")
     hashtable.add("name", "Alan")
     assert hashtable.get("name") == expected
+
+def test_hashtable_get_returns_none_if_key_does_not_exist(hashtable):
+    assert not hashtable.get("name")
+
