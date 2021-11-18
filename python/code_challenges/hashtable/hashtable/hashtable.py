@@ -24,8 +24,7 @@ class Hashtable:
     def __init__(self, size = 1024):
         self.__size = size
         self.__buckets = [None for _ in range(size)]
-    def add(self):
-        pass
+
     def __hash(self, key):
         return sum([ord(char) for char in key]) * 7 % self.__size
 
@@ -41,7 +40,7 @@ class Hashtable:
         index = self.__hash(key)
         value = self.__buckets[index]
         if value:
-            if isinstance(value, 'LinkedList'):
+            if isinstance(value, LinkedList):
                 current = value.head
                 while current:
                     if current.value[0] == key:
