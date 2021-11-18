@@ -17,3 +17,8 @@ def test_hashable_contains_pair_in_a_linked_list(hashtable):
     hashtable.add("name", "Hamza")
     hashtable.add("name", "Alan")
     assert hashtable.contains("name")
+
+def test_hashtable_add(hashtable):
+    hashtable.add("name", "Einstein")
+    assert hashtable.contains('name')
+
