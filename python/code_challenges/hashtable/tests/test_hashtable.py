@@ -54,3 +54,10 @@ def test_hashtable_get_returns_none_if_key_does_not_exist(hashtable):
 
 def test_hashtable_contains_returns_false_if_key_does_not_exist(hashtable):
     assert not hashtable.contains("name")
+
+def test_hashtable_handles_collisions(hashtable):
+    expected = "grey"
+    hashtable.add("color", "red")
+    hashtable.add("color", "blue")
+    hashtable.add("color", "grey")
+    assert hashtable.get("color") == expected
