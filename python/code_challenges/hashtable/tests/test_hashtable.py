@@ -52,3 +52,5 @@ def test_hashtable_get_returns_correct_last_value(hashtable):
 def test_hashtable_get_returns_none_if_key_does_not_exist(hashtable):
     assert not hashtable.get("name")
 
+def test_hashtable_contains_returns_false_if_key_does_not_exist(hashtable):
+    assert not hashtable.contains("name")
