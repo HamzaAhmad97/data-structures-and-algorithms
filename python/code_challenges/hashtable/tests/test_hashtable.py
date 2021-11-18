@@ -38,3 +38,7 @@ def test_hashable_add_same_key(hashtable):
 )
 def test_hashtable_hash(key,hashcode, hashtable):
     assert hashtable._Hashtable__hash(key) == hashcode
+def test_hashtable_get_returns_value(hashtable):
+    expected = "Hamza"
+    hashtable.add("name", "Hamza")
+    assert hashtable.get("name") == expected
