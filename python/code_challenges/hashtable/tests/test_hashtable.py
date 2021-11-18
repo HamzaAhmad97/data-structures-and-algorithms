@@ -22,3 +22,7 @@ def test_hashtable_add(hashtable):
     hashtable.add("name", "Einstein")
     assert hashtable.contains('name')
 
+def test_hashable_add_same_key(hashtable):
+    hashtable.add("a", "a")
+    hashtable.add("a", "a")
+    assert hashtable.contains("a")
