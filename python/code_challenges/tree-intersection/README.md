@@ -2,7 +2,7 @@
 
 ## Pull Request.
 
-[Latest open pull requset.]()
+[Latest open pull requset.](https://github.com/HamzaAhmad97/data-structures-and-algorithms/pull/39)
 
 ## Challenge Summary
 
