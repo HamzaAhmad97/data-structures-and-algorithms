@@ -3,6 +3,13 @@ import os
 from tree_intersection.depenancy_classes import Hashtable, breadth_first, EmptyTree, BinarySearchTree
 
 def tree_intersection(tree_a, tree_b):
+    """
+    A funciton that accepts two binary trees and returns a list containing the values that are found in both trees.
+    
+    Returns
+    -------
+        list: a list of the values of the nodes that are found in both trees.
+    """
     intersections = []
     ht = Hashtable()
     try:
