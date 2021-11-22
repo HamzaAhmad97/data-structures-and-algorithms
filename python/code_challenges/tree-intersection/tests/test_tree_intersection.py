@@ -12,6 +12,9 @@ def test_version():
         (["1",2,"3"], [1,"2",3],None ),
         (["1",1,2], ["1",1,2], ["1",1,2]),
         ([1],[2],None),
+        ([],[], None),
+        ([], [1], None),
+        ([1,1,1], [1,1,1], [1])
     ]
 )
 def test_tree_intersection(tree_a, tree_b, intersections):
