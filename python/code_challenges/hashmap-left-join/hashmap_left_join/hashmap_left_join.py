@@ -2,7 +2,16 @@ from hashmap_left_join.dependency_classes import Hashtable
 #from dependency_classes import Hashtable
 
 def left_join(ht1, ht2):
+    """
+    A function that accepts two hashtables and performs left join and adds the result to a list.
 
+    Args:
+        ht1 (Hashtable): The left hashtbale instance.
+        ht2 (Hashtable): The right hashtable instance.
+
+    Returns:
+        list: The values after left join.
+    """
     container = []
     for itm in ht1._Hashtable__buckets:
         if itm:

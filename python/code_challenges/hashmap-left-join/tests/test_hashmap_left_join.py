@@ -9,6 +9,9 @@ def test_version():
 
 
 def test_left_join_1():
+    """
+    Test left join scenario 1
+    """
     expected = [('a', ('a', '2')), ('a', ('a', '1')), ('b', ('b', '1')), ('c', ('c', None))]
     ht_left = Hashtable()
     ht_right = Hashtable()
@@ -21,6 +24,9 @@ def test_left_join_1():
     assert left_join(ht_left, ht_right) == expected
 
 def test_left_join_2():
+    """
+    Test left join scenario 2
+    """
     expected = [('a', ('a', '3')), ('a', ('a', '2')), ('a', ('a', '1')), ('b', ('b', None)) ,('c', ('c', None))]
     ht_left = Hashtable()
     ht_right = Hashtable()
@@ -32,7 +38,10 @@ def test_left_join_2():
         ht_right.add(key, value)
     assert left_join(ht_left, ht_right) == expected
 
-def test_left_join_3():
+def test_left_join_with_empty_left_hashtable():
+    """
+    Test left join scenario 3 with an empty left hashtable.
+    """
     expected = []
     ht_left = Hashtable()
     ht_right = Hashtable()
@@ -45,6 +54,9 @@ def test_left_join_3():
     assert left_join(ht_left, ht_right) == expected
 
 def test_left_join_4():
+    """
+    Test left join scenario 4
+    """
     expected = [('a', ('a', None)), ('b', ('b', None)) ,('c', ('c', None))]
     ht_left = Hashtable()
     ht_right = Hashtable()
@@ -55,6 +67,10 @@ def test_left_join_4():
     for key, value in val_right:
         ht_right.add(key, value)
     assert left_join(ht_left, ht_right) == expected
+
+
+
+
 
 # @pytest.fixture(scope="function")
 # def hashtable_left(vals):
@@ -69,8 +85,6 @@ def test_left_join_4():
 #     for key, val in vals:
 #         ht.add(key, val)
 #     return ht
-
-
 
 # @pytest.mark.parametrize(
 #     "hashtable_left,hashtable_right,expected", 
