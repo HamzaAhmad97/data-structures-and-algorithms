@@ -38,5 +38,5 @@ def hashtable(vals):
         ), 
     ]
 )
-
-# [('a', ('11', 'dddd')), ('a', ('11', 'dd')), ('a', ('11', '4')), ('b', ('22', '2')), ('c', ('33', '3'))]
+def test_left_join(left_hashtable,right_hashtable, expected,hashtable):
+    assert left_join(hashtable(left_hashtable), hashtable(right_hashtable)) == expected
