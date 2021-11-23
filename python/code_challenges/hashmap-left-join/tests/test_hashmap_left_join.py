@@ -1,3 +1,4 @@
+from typing import Hashable
 import pytest
 from hashmap_left_join import __version__
 from hashmap_left_join.hashmap_left_join import left_join
@@ -5,7 +6,12 @@ from hashmap_left_join.hashmap_left_join import left_join
 def test_version():
     assert __version__ == '0.1.0'
 
-
+@pytest.fixture
+def hashtable(vals):
+    ht = Hashable()
+    for key, val in vals:
+        ht.add(key, val)
+    return ht
 
 @pytest.mark.parametrize(
     "left_hashtable,right_hashtable, expected", 
