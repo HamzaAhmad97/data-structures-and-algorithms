@@ -85,36 +85,58 @@ class Edge:
         The constructor method of edge class. Initializes the vertex and the weight properties.
 
         Args:
-            vertex (Vertex): [description]
-            weight ([type]): [description]
+            vertex (Vertex): A vertex instance.
+            weight (int): The weight given to a connection.
         """
         self.vertex = vertex
         self.weight = weight
 
 
 class Graph:
+    """
+    A class representing a data structure that consists of a set of vertices that are connected to each other.
+    """
     def __init__(self):
         """
-    Initalization for a hashmap to hold the vertices
-    """
+        A constructor method of the class Graph. Initialize the adjacency_list property.
+        """
         self.__adjacency_list = {}
 
     def add_node(self, value):
         """
-      Method for Adding a node to the graph
-      Arguments: value
-      Returns: The added node
-    """
-        # new node
+        Add a node to a graph.
+
+        Args:
+            value (any): The value to be stored in a vertex to be added to a graph.
+
+        Returns:
+            vertex: The newly added vertex instance.
+        """
         v = Vertex(value)
         self.__adjacency_list[v] = []
         return v
 
     def size(self):
+        """
+        Get the number of vertices in a graph.
+
+        Returns:
+            int: The number of nodes or vertices in a graph.
+        """
         return len(self.__adjacency_list)
 
     def add_edge(self, start_vertex, end_vertex, weight=0):
-        """Adds an edge to the graph"""
+        """
+        Create a connection between two vertices in a graph with a weight.
+
+        Args:
+            start_vertex (vertex): The starting vertex.
+            end_vertex (vertex):  The ending vertex.
+            weight (int, optional): The weight or strenght of connection. Defaults to 0.
+
+        Raises:
+            KeyError: If either the start or the end vertex do not exist in the graph.
+        """
         if start_vertex not in self.__adjacency_list:
             raise KeyError("Start Vertex not found in graph")
 
@@ -126,17 +148,33 @@ class Graph:
 
     def get_nodes(self):
         """
-    Method to get all nodes in Graph
-    Arguments: None
-    return: All nodes
-    """
+        Return all the nodes in a graph.
+
+        Returns:
+            list: A list of all the vertices in a graph.
+        """
         return self.__adjacency_list.keys()
 
     def get_neighbors(self, vertex):
-        """ """
+        """
+        Get all the neighbors of the vertex vertex.
+
+        Args:
+            vertex (vertex): The vertex to get its neighbors.
+
+        Returns:
+            list: A list of all the adjacent vertices to a given vertex instance.
+        """
         return self.__adjacency_list.get(vertex, [])
 
     def breadth_first_search(self, start_vertex, action=(lambda vertex: None)):
+        """
+        Traverse a graph in breadth first search manner.
+
+        Args:
+            start_vertex (vertex): the vertex to start traversing from.
+            action (function, optional): the action we want to execute or apply on each vertex in a graph. Defaults to (lambda vertex: None).
+        """
         queue = Queue()
         visited = set()
 
