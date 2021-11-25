@@ -1,6 +1,6 @@
 import pytest
 
-from graph import  Graph, Vertex
+from graph.graph import  Graph, Vertex
 
 def test_add_node():
   graph = Graph()
