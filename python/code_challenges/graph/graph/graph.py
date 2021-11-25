@@ -29,3 +29,28 @@ class Queue:
         return len(self.dq)
 
 
+class Stack:
+    def __init__(self):
+        """
+		The constructor method for the stack class and it initializes the dq property to a new double ended queue instance.
+		"""
+        self.dq = deque()
+
+    def push(self, value):
+        """
+		Store the passed value in a node and then push the node on top of the stack.
+		
+		PARAMETERS
+		----------
+			value: any
+				The value that will get stored in a node to be pushed on top of the stack.
+		"""
+        self.dq.append(value)
+
+    def pop(self):
+        """
+		Return the top node in a stack.
+		"""
+        self.dq.pop()
+
+
