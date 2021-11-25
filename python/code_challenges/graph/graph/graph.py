@@ -15,3 +15,17 @@ class Vertex:
         self.value = value
 
 
+class Queue:
+    def __init__(self):
+        self.dq = deque()
+
+    def enqueue(self, value):
+        self.dq.appendLeft(value)
+
+    def dequeue(self):
+        self.dq.pop()
+
+    def __len__(self):
+        return len(self.dq)
+
+
