@@ -3,33 +3,57 @@ from collections import deque
 
 class Vertex:
     """
-  Class for Adding a node to the graph
-  Arguments: value
-  Returns: The added node
-  """
+    A class representing a container.
+    """
     def __init__(self, value):
         """
-    Initalization for a Vertex to hold a value.
-    
-    """
+        The constructor method for the vertex class. Initializes the property value.
+
+        Args:
+            value (any): The value to be stored in a vertex.
+        """
         self.value = value
 
 
 class Queue:
+    """
+    A class representing a queue which is a data structure that utilizes the first in first out access method.
+    """
     def __init__(self):
+        """
+        The constructor method of the queue class. Initializes the dq property to a deque instance.
+        """
         self.dq = deque()
 
     def enqueue(self, value):
+        """
+        Push or add a value after storing it in a vertex to a queue.
+
+        Args:
+            value (any): The value to be pushed to the queue in a vertex instance.
+        """
         self.dq.appendLeft(value)
 
     def dequeue(self):
+        """
+        Get or pop the front or the very first element in a queue.
+        """
         self.dq.pop()
 
     def __len__(self):
+        """
+        Overwrite the len method so that the queue has a length property.
+
+        Returns:
+            int: A representation of the length of a queue.
+        """
         return len(self.dq)
 
 
 class Stack:
+    """
+    A data structure that utilitzes the first in last out access method.
+    """
     def __init__(self):
         """
 		The constructor method for the stack class and it initializes the dq property to a new double ended queue instance.
@@ -38,31 +62,32 @@ class Stack:
 
     def push(self, value):
         """
-		Store the passed value in a node and then push the node on top of the stack.
-		
-		PARAMETERS
-		----------
-			value: any
-				The value that will get stored in a node to be pushed on top of the stack.
-		"""
+        Push a value in a node on top of a stack.
+
+        Args:
+            value (any): The value to be pushed on top of the stack.
+        """
         self.dq.append(value)
 
     def pop(self):
         """
-		Return the top node in a stack.
-		"""
+        Pop or get the very last item in a stack.
+        """
         self.dq.pop()
 
 
 class Edge:
-    """ 
-    a class for Adding a new edge between two nodes in the graph
-    If specified, assigning a weight to the edge
-    Arguments: 2 nodes to be connected by the edge, weight (optional)
-    Returns: nothing
-    
-  """
+    """
+    A class representing a connection between two enteties or vertices.
+    """
     def __init__(self, vertex, weight):
+        """
+        The constructor method of edge class. Initializes the vertex and the weight properties.
+
+        Args:
+            vertex (Vertex): [description]
+            weight ([type]): [description]
+        """
         self.vertex = vertex
         self.weight = weight
 
@@ -127,6 +152,6 @@ class Graph:
             for edge in neighbors:
                 neighbor = edge.vertex
 
-                if neighbour not in visited:
+                if neighbor not in visited:
                     visited.add(neighbor)
-                    queue.enqueue(neighbour)
+                    queue.enqueue(neighbor)
