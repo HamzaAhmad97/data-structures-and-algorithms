@@ -16,13 +16,13 @@ This challenge requires defining a function that accepts two hashtables and join
 
 ## Approach & Efficiency
 
-The left_join function iterates once over the indexes of the left hashtable, and in each iteration, it iterates over the nodes in the linked lists found at each index, then for every node in those linked lists, it iterates over the nodes in the linked list found at the index in the right hashtable that is a result of hashing the key from the left key, so the worst case scenario is O(N^3) in terms of time.
+The left_join funciton defines two for loops which basically iterate over the lists of nodes returned from the get_nodes method, and they define a list named contianer to hold the returned key/values pairs so the time complexity is O(N^2) and space complexity is O(N).
 
-When it comes to space, we only define an empty list that will hold all the joins or merges so we get O(N).
+When it comes to the get_nodes method defined inside of the hashtable class, it iterates over the buckets list then iterates over the nodes found in each linked list, it also defines a list named container to hold the nodes found, so the time complexity is O(N^2), and space complexity is O(N).
 
 
 ## Solution
 
-![](./assets/lj.png)
+![](./assets/ljgn.png)
 
 
