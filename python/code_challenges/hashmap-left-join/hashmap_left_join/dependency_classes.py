@@ -297,14 +297,19 @@ class Hashtable:
             return True
         return False
 
-    def get_keys(self):
+    def get_nodes(self):
+        """
+        Return a list containing all the nodes that hold key/value pairs in a hashtable.
+
+        Returns:
+            list: a list containing all the nodes that hold key/value pairs in a hashtable.
+        """
         container = []
         for itm in self.__buckets:
             if isinstance(itm, LinkedList):
                 current = itm.head
                 while current:
                     container.append(current)
-                    print(current.value)
                     current = current._next
         return container
 

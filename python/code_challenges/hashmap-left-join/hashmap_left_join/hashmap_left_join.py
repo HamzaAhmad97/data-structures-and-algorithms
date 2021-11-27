@@ -1,3 +1,4 @@
+
 from hashmap_left_join.dependency_classes import Hashtable
 #from dependency_classes import Hashtable
 
@@ -13,23 +14,15 @@ def left_join(ht1, ht2):
         list: The values after left join.
     """
     container = []
-    for itm in ht1._Hashtable__buckets:
-        if itm:
-            current = itm.head
-            while current:
-                hashcode = ht1._Hashtable__hash(current.value[0])
-                cur = ht2._Hashtable__buckets[hashcode]
-                if not cur:
-                    container.append((current.value[0], (current.value[1], None)))
-                    current = current._next
-                    continue
-                cur = cur.head
-                while cur:
-                    if cur.value[0] == current.value[0]:
 
-                        container.append((current.value[0], (current.value[1], cur.value[1])))
-                    cur = cur._next
-                current = current._next
+    for node in ht1.get_nodes():
+        ctr = 0
+        for item in ht2.get_nodes():
+            if item.value[0] == node.value[0]:
+                container.append((node.value[0], (node.value[1], item.value[1])))
+                ctr += 1
+        if not ctr:
+            container.append((node.value[0], (node.value[1], None)))
     return container
 
 
