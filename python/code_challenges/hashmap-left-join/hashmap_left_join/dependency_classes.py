@@ -297,6 +297,18 @@ class Hashtable:
             return True
         return False
 
+    def get_keys(self):
+        container = []
+        for itm in self.__buckets:
+            if isinstance(itm, LinkedList):
+                current = itm.head
+                while current:
+                    container.append(current)
+                    print(current.value)
+                    current = current._next
+        return container
+
+
 def breadth_first(tree):
     """
     A function to iterate over the nodes in a binary tree and returns all the nodes in it in breadth first style.
@@ -315,3 +327,10 @@ def breadth_first(tree):
         if front.right:
             q.enqueue(front.right)
     return container
+
+if __name__ == "__main__":
+    ht = Hashtable()
+    ht.add("a", "a")
+    ht.add("b", "b")
+    ht.add("c", "c")
+    print(ht.get_keys())
