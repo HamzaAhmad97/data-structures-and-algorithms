@@ -32,13 +32,13 @@ class Queue:
         Args:
             value (any): The value to be pushed to the queue in a vertex instance.
         """
-        self.dq.appendLeft(value)
+        self.dq.appendleft(value)
 
     def dequeue(self):
         """
         Get or pop the front or the very first element in a queue.
         """
-        self.dq.pop()
+        return self.dq.pop()
 
     def __len__(self):
         """
@@ -167,29 +167,3 @@ class Graph:
         """
         return self.__adjacency_list.get(vertex, [])
 
-    def breadth_first_search(self, start_vertex, action=(lambda vertex: None)):
-        """
-        Traverse a graph in breadth first search manner.
-
-        Args:
-            start_vertex (vertex): the vertex to start traversing from.
-            action (function, optional): the action we want to execute or apply on each vertex in a graph. Defaults to (lambda vertex: None).
-        """
-        queue = Queue()
-        visited = set()
-
-        queue.enqueue(start_vertex)
-        visited.add(start_vertex)
-
-        while len(queue):
-            current_vertex = queue.dequeue()
-            action(current_vertex)
-
-            neighbors = self.get_neigbors(current_vertex)
-
-            for edge in neighbors:
-                neighbor = edge.vertex
-
-                if neighbor not in visited:
-                    visited.add(neighbor)
-                    queue.enqueue(neighbor)
