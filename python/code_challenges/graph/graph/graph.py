@@ -194,22 +194,3 @@ class Graph:
                     queue.enqueue(neighbor)
         return nodes
 
-if __name__ == "__main__":
-    gph = Graph()
-    a = gph.add_node("a")
-    b = gph.add_node("b")
-    c = gph.add_node("c")
-    d = gph.add_node("d")
-    e = gph.add_node("e")
-    gph.add_edge(a,b,weight=1)
-    gph.add_edge(a,c,weight=1)
-    gph.add_edge(c,d,weight=1)
-    gph.add_edge(a,e,weight=1)
-    gph.add_edge(b,e,weight=1)
-
-    gph.add_edge(b,a,weight=1)
-    gph.add_edge(c,a,weight=1)
-    gph.add_edge(d,c,weight=1)
-    gph.add_edge(e,a,weight=1)
-    gph.add_edge(e,b,weight=1)
-    print(gph.breadth_first_search(d))
