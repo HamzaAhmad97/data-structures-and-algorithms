@@ -167,3 +167,46 @@ class Graph:
         """
         return self.__adjacency_list.get(vertex, [])
 
+    def breadth_first_search(self, start_vertex):
+        """
+        Traverse a graph in breadth first search manner.
+
+        Args:
+            start_vertex (vertex): the vertex to start traversing from.
+            action (function, optional): the action we want to execute or apply on each vertex in a graph. Defaults to (lambda vertex: None).
+        """
+        queue = Queue()
+        visited = set()
+        nodes = []
+        
+        queue.enqueue(start_vertex)
+        visited.add(start_vertex)
+        
+        while len(queue):
+            current_vertex = queue.dequeue()
+            print(current_vertex)
+            nodes.append(current_vertex.value)
+
+            neighbors = self.get_neighbors(current_vertex)
+            for edge in neighbors:
+                
+                neighbor = edge.vertex
+
+                if neighbor not in visited:
+                    visited.add(neighbor)
+                    queue.enqueue(neighbor)
+        return nodes
+
+if __name__ == "__main__":
+    gph = Graph()
+    a = gph.add_node("a")
+    b = gph.add_node("b")
+    c = gph.add_node("c")
+    d = gph.add_node("d")
+    e = gph.add_node("e")
+    gph.add_edge(a,b,weight=1)
+    gph.add_edge(a,c,weight=1)
+    gph.add_edge(c,d,weight=1)
+    gph.add_edge(a,e,weight=1)
+    gph.add_edge(b,e,weight=1)
+    print(gph.breadth_first_search(a))
