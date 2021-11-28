@@ -184,14 +184,10 @@ class Graph:
         
         while len(queue):
             current_vertex = queue.dequeue()
-            print(current_vertex)
             nodes.append(current_vertex.value)
-
             neighbors = self.get_neighbors(current_vertex)
             for edge in neighbors:
-                
                 neighbor = edge.vertex
-
                 if neighbor not in visited:
                     visited.add(neighbor)
                     queue.enqueue(neighbor)
