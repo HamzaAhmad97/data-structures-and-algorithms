@@ -1,5 +1,9 @@
 # Challenge Summary
 
+## Pull Request
+
+[Latest open pull request.](https://github.com/HamzaAhmad97/data-structures-and-algorithms/pull/42)
+
 The current challenge requires adding the breadth_first_search method to a graph class.
 
 ## Whiteboard Process
