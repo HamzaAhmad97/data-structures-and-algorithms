@@ -186,6 +186,7 @@ class Graph:
             current_vertex = queue.dequeue()
             nodes.append(current_vertex.value)
             neighbors = self.get_neighbors(current_vertex)
+            print(neighbors)
             for edge in neighbors:
                 neighbor = edge.vertex
                 if neighbor not in visited:
@@ -205,4 +206,10 @@ if __name__ == "__main__":
     gph.add_edge(c,d,weight=1)
     gph.add_edge(a,e,weight=1)
     gph.add_edge(b,e,weight=1)
-    print(gph.breadth_first_search(a))
+
+    gph.add_edge(b,a,weight=1)
+    gph.add_edge(c,a,weight=1)
+    gph.add_edge(d,c,weight=1)
+    gph.add_edge(e,a,weight=1)
+    gph.add_edge(e,b,weight=1)
+    print(gph.breadth_first_search(d))
