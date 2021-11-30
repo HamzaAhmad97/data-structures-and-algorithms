@@ -72,7 +72,10 @@ class Stack:
         return self.dq.pop()
 
     def peek(self):
-        return self.dq[0]
+        return self.dq[-1]
+
+    def is_empty(self):
+        return True if not len(self.dq) else False
 
 class Edge:
     """
