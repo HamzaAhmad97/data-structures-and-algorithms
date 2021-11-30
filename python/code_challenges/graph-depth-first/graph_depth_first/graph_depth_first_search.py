@@ -1,5 +1,5 @@
 from collections import deque
-
+import os
 
 class Vertex:
     """
@@ -122,7 +122,7 @@ class Graph:
         """
         return len(self.__adjacency_list)
 
-    def add_edge(self, start_vertex, end_vertex, weight=0):
+    def add_edge(self, start_vertex, end_vertex, weight=1):
         """
         Create a connection between two vertices in a graph with a weight.
         Args:
@@ -158,3 +158,67 @@ class Graph:
             list: A list of all the adjacent vertices to a given vertex instance.
         """
         return self.__adjacency_list.get(vertex, [])
+
+    def depth_first_search(self, start_node):
+        visited = []
+
+        def traverse(start_node):
+            unvisted_neighbors = []
+            if start_node not in visited:
+                visited.append(start_node)
+            neighbors = [edge.vertex for edge in self.get_neighbors(start_node)]
+            for neighbor in neighbors:
+                if neighbor not in visited:
+                    unvisted_neighbors.append(neighbor)
+            for neighbor in unvisted_neighbors:
+                traverse(neighbor)
+
+        traverse(start_node)
+        return [v.value for v in visited]
+
+
+if __name__ == "__main__":
+    os.system('clear')
+    route = Graph()
+    a = route.add_node("a")
+    b = route.add_node("b")
+    c = route.add_node("c")
+    d = route.add_node("d")
+    e = route.add_node("e")
+    f = route.add_node("f")
+    g = route.add_node("g")
+    h = route.add_node("h")
+
+    route.add_edge(a,b)
+    route.add_edge(a,d)
+
+    route.add_edge(b,a)
+    route.add_edge(b,d)
+    route.add_edge(b,c)
+
+    route.add_edge(c,b)
+    route.add_edge(c,g)
+
+    route.add_edge(d,a)
+    route.add_edge(d,b)
+    route.add_edge(d,f)
+    route.add_edge(d,h)
+    route.add_edge(d,e)
+
+    route.add_edge(e,d)
+
+    route.add_edge(f,d)
+    route.add_edge(f,h)
+
+    route.add_edge(g,c)
+
+    route.add_edge(h,d)
+    route.add_edge(h,f)
+
+
+
+
+    print(route.depth_first_search(h))
+
+
+    
