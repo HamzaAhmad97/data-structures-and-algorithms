@@ -1,10 +1,12 @@
 from collections import deque
 import os
 
+
 class Vertex:
     """
     A class representing a container.
     """
+
     def __init__(self, value):
         """
         The constructor method for the vertex class. Initializes the property value.
@@ -18,6 +20,7 @@ class Queue:
     """
     A class representing a queue which is a data structure that utilizes the first in first out access method.
     """
+
     def __init__(self):
         """
         The constructor method of the queue class. Initializes the dq property to a deque instance.
@@ -51,10 +54,11 @@ class Stack:
     """
     A data structure that utilitzes the first in last out access method.
     """
+
     def __init__(self):
         """
-		The constructor method for the stack class and it initializes the dq property to a new double ended queue instance.
-		"""
+                The constructor method for the stack class and it initializes the dq property to a new double ended queue instance.
+                """
         self.dq = deque()
 
     def push(self, value):
@@ -77,10 +81,12 @@ class Stack:
     def is_empty(self):
         return True if not len(self.dq) else False
 
+
 class Edge:
     """
     A class representing a connection between two enteties or vertices.
     """
+
     def __init__(self, vertex, weight):
         """
         The constructor method of edge class. Initializes the vertex and the weight properties.
@@ -96,6 +102,7 @@ class Graph:
     """
     A class representing a data structure that consists of a set of vertices that are connected to each other.
     """
+
     def __init__(self):
         """
         A constructor method of the class Graph. Initialize the adjacency_list property.
@@ -163,16 +170,13 @@ class Graph:
         visited = []
 
         def traverse(start_node):
-            unvisted_neighbors = []
-            if start_node not in visited:
-                visited.append(start_node)
-            neighbors = [edge.vertex for edge in self.get_neighbors(start_node)]
+            if start_node in visited:
+                return
+            visited.append(start_node)
+            neighbors = [edge.vertex for edge in self.get_neighbors(
+                start_node) if edge.vertex not in visited]
             for neighbor in neighbors:
-                if neighbor not in visited:
-                    unvisted_neighbors.append(neighbor)
-            for neighbor in unvisted_neighbors:
                 traverse(neighbor)
-
         traverse(start_node)
         return [v.value for v in visited]
 
@@ -180,6 +184,7 @@ class Graph:
 if __name__ == "__main__":
     os.system('clear')
     route = Graph()
+    x = route.add_node("A")
     a = route.add_node("a")
     b = route.add_node("b")
     c = route.add_node("c")
@@ -189,36 +194,30 @@ if __name__ == "__main__":
     g = route.add_node("g")
     h = route.add_node("h")
 
-    route.add_edge(a,b)
-    route.add_edge(a,d)
+    route.add_edge(a, b)
+    route.add_edge(a, d)
 
-    route.add_edge(b,a)
-    route.add_edge(b,d)
-    route.add_edge(b,c)
+    route.add_edge(b, a)
+    route.add_edge(b, d)
+    route.add_edge(b, c)
 
-    route.add_edge(c,b)
-    route.add_edge(c,g)
+    route.add_edge(c, b)
+    route.add_edge(c, g)
 
-    route.add_edge(d,a)
-    route.add_edge(d,b)
-    route.add_edge(d,f)
-    route.add_edge(d,h)
-    route.add_edge(d,e)
+    route.add_edge(d, a)
+    route.add_edge(d, b)
+    route.add_edge(d, f)
+    route.add_edge(d, h)
+    route.add_edge(d, e)
 
-    route.add_edge(e,d)
+    route.add_edge(e, d)
 
-    route.add_edge(f,d)
-    route.add_edge(f,h)
+    route.add_edge(f, d)
+    route.add_edge(f, h)
 
-    route.add_edge(g,c)
+    route.add_edge(g, c)
 
-    route.add_edge(h,d)
-    route.add_edge(h,f)
+    route.add_edge(h, d)
+    route.add_edge(h, f)
 
-
-
-
-    print(route.depth_first_search(h))
-
-
-    
+    print(route.depth_first_search(b))
