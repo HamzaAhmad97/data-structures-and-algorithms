@@ -220,4 +220,4 @@ if __name__ == "__main__":
     route.add_edge(h, d)
     route.add_edge(h, f)
 
-    print(route.depth_first_search(b))
+    print(route.depth_first_search(c))

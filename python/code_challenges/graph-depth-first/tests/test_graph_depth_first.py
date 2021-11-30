@@ -46,3 +46,14 @@ def graph():
     graph.add_edge(h, d)
     graph.add_edge(h, f)
     return {"graph": graph, "a": a, "b": b, "c": c, "d": d, "e": e, "f": f, "g": g, "h": h}
+
+@pytest.mark.parametrize(
+    "start,visited",
+    [
+        ("a", ['a', 'b', 'd', 'f', 'h', 'e', 'c', 'g']),
+        ("b", ['b', 'a', 'd', 'f', 'h', 'e', 'c', 'g']),
+        ("c", ['c', 'b', 'a', 'd', 'f', 'h', 'e', 'g']),
+    ]
+)
+def test_depth_first_search(start, visited, graph):
+    assert graph['graph'].depth_first_search(graph[start]) == visited
