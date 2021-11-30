@@ -167,6 +167,15 @@ class Graph:
         return self.__adjacency_list.get(vertex, [])
 
     def depth_first_search(self, start_node):
+        """
+        Traverse a graph in depth first pre-orderal manner given a starting node.
+
+        Args:
+            start_node (vertex): Starting vertex or node.
+
+        Returns:
+            list: A list of the values of the visited vertices.
+        """
         visited = []
 
         def traverse(start_node):
@@ -179,45 +188,3 @@ class Graph:
                 traverse(neighbor)
         traverse(start_node)
         return [v.value for v in visited]
-
-
-if __name__ == "__main__":
-    os.system('clear')
-    route = Graph()
-    x = route.add_node("A")
-    a = route.add_node("a")
-    b = route.add_node("b")
-    c = route.add_node("c")
-    d = route.add_node("d")
-    e = route.add_node("e")
-    f = route.add_node("f")
-    g = route.add_node("g")
-    h = route.add_node("h")
-
-    route.add_edge(a, b)
-    route.add_edge(a, d)
-
-    route.add_edge(b, a)
-    route.add_edge(b, d)
-    route.add_edge(b, c)
-
-    route.add_edge(c, b)
-    route.add_edge(c, g)
-
-    route.add_edge(d, a)
-    route.add_edge(d, b)
-    route.add_edge(d, f)
-    route.add_edge(d, h)
-    route.add_edge(d, e)
-
-    route.add_edge(e, d)
-
-    route.add_edge(f, d)
-    route.add_edge(f, h)
-
-    route.add_edge(g, c)
-
-    route.add_edge(h, d)
-    route.add_edge(h, f)
-
-    print(route.depth_first_search(c))
